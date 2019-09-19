@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command APIViet</Text>
+    <Description>CreateRibbon for APIViet</Description>
+    <Assembly>APIViet.Ribbon.dll</Assembly>
+    <FullClassName>APIViet.Ribbon.Command</FullClassName>
+    <ClientId>f947576c-565a-4b34-a18b-9b0ee33064ff</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application APIViet.Ribbon</Name>
+    <Assembly>APIViet.Ribbon.dll</Assembly>
+    <FullClassName>APIViet.Ribbon.App</FullClassName>
+    <ClientId>1faeb7bf-5935-48a2-bc67-994e400fb9fd</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

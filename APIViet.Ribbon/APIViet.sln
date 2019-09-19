@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIViet.Ribbon", "APIViet\APIViet.Ribbon.csproj", "{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ribbon", "Ribbon", "{B43915A8-1B94-4F56-98AC-A9A61ED7F570}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{32356C62-8D57-4A56-A489-BE9ABA7C2F72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9714981E-40F2-411B-9CB3-DC52856DD6AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImgSource", "ImgSource", "{4CBCAF9D-3BD2-4F25-9403-7E48B571AAFB}"
+	ProjectSection(SolutionItems) = preProject
+		E:\00 - BIM\05 - REVIT API\05 - PROJECT C# ADDIN REVIT\03 - BEAB\Revit-logo.png = E:\00 - BIM\05 - REVIT API\05 - PROJECT C# ADDIN REVIT\03 - BEAB\Revit-logo.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C} = {32356C62-8D57-4A56-A489-BE9ABA7C2F72}
+		{32356C62-8D57-4A56-A489-BE9ABA7C2F72} = {B43915A8-1B94-4F56-98AC-A9A61ED7F570}
+		{9714981E-40F2-411B-9CB3-DC52856DD6AE} = {B43915A8-1B94-4F56-98AC-A9A61ED7F570}
+		{4CBCAF9D-3BD2-4F25-9403-7E48B571AAFB} = {32356C62-8D57-4A56-A489-BE9ABA7C2F72}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A419173-1A39-4AB6-875B-2CFD2CD92EF8}
+	EndGlobalSection
+EndGlobal
