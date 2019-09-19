@@ -12,7 +12,7 @@ using Autodesk.Revit.UI.Selection;
 namespace APIViet.Ribbon
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command : IExternalCommand
+    public class FirstProgram : IExternalCommand
     {
         public Result Execute(
           ExternalCommandData commandData,

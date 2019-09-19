@@ -14,10 +14,11 @@ namespace APIViet.Ribbon
     /// </summary>
     //[Transaction(TransactionMode.Manual)]
 
-
+    [Transaction(TransactionMode.Manual)]
     public class Tab
     {
-        public void AddRibbon(UIControlledApplication app, string tabName)
+        public Tab() { }
+        public void CreateNewTab(UIControlledApplication app, string tabName)
         {
             app.CreateRibbonTab(tabName);
         }
