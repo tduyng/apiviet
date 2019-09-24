@@ -38,29 +38,10 @@ namespace APIViet.Ribbon
         }
 
 
-        static BitmapImage GetIcon( string imageFolder,string imageName)
-        {
-            try
-            {
-                return new BitmapImage(new Uri(Path.Combine(imageFolder, imageName)));
-            }
-            catch
-            {
-                return null;
-            }
-        }
-       
-
-       
-
         private void AddControls(UIControlledApplication uiApp)
         {
-            string assemblyName = Assembly.GetExecutingAssembly().Location;;
-            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            //string dir = Path.GetDirectoryName(assemblyName);
-            string imageFolderName = "ImgSource";
-            string imageFolder = Path.Combine(projectPath, imageFolderName);
-            BitmapImage img = GetIcon(imageFolder, "Fermer 2.PNG");
+            string assemblyName = Assembly.GetExecutingAssembly().Location;
+            string sourceImageName = "APIViet.ImgSources.";
 
             // Varibale const
             string tabName = "APIViet";
@@ -79,16 +60,16 @@ namespace APIViet.Ribbon
        
 
             //Add push button
-            AddButton(panel1, "Buton11", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
-            AddButton(panel1, "Buton12", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
-            AddButton(panel2, "Buton21", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
-            AddButton(panel2, "Buton22", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
-            AddButton(panel3, "Buton31", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
-            AddButton(panel3, "Buton32", assemblyName, "APIViet.Ribbon.HelloWorld", img, "To show a message Hello World!");
+            AddButton(panel1, "Buton11", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
+            AddButton(panel1, "Buton12", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
+            AddButton(panel2, "Buton21", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
+            AddButton(panel2, "Buton22", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
+            AddButton(panel3, "Buton31", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
+            AddButton(panel3, "Buton32", assemblyName, "APIViet.Ribbon.HelloWorld", sourceImageName + "Revit.png", "To show a message Hello World!");
         }
-        private void AddButton(RibbonPanel panel, string buttonName,string assemblyName, string className, BitmapImage image, string btnTooltip)
+        private void AddButton(RibbonPanel panel, string buttonName,string assemblyName, string className, string imageName, string btnTooltip)
         {
-            PushButtonData btnData1 = ButtonData.GetButtonData(buttonName, assemblyName, className, image, btnTooltip);
+            PushButtonData btnData1 = ButtonData.GetButtonData(buttonName, assemblyName, className, imageName, btnTooltip);
             PushButton btn1 = panel.AddItem(btnData1) as PushButton;
         }
 

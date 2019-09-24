@@ -16,17 +16,14 @@ namespace APIViet.Ribbon
        
         //PushButton
         
-        public void AddButton(RibbonPanel panel, string btnName, string assemblyName, string className, BitmapImage image, string btnTooltip)
+        public void AddButton(RibbonPanel panel, string btnName, string assemblyName, string className, string imageName, string btnTooltip)
         {
             PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assemblyName, className);
 
             btnData.ToolTip = btnTooltip;
             ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "http://www.autodesk.com");
             btnData.SetContextualHelp(help);
-            if (image != null)
-            {
-                btnData.LargeImage = image;
-            }
+            btnData.LargeImage = Image.ImageSource(imageName) ;
             //Add buton to panel
             PushButton btn1 = panel.AddItem(btnData) as PushButton;
 
