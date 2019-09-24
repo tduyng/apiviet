@@ -11,25 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{32356C62-8D5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9714981E-40F2-411B-9CB3-DC52856DD6AE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImgSource", "ImgSource", "{4CBCAF9D-3BD2-4F25-9403-7E48B571AAFB}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Agrandir.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Agrandir.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Aide.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Aide.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Agrandir.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Agrandir.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Aide.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Aide.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Fermer_1.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Fermer_1.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Minimiser.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\BD_Minimiser.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\DB_Réduire.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\DB_Réduire.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Démarrer.png = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Démarrer.png
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer 2.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer 2.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer.png = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer.png
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer1.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Fermer1.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Minimiser.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Minimiser.PNG
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Plus.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Plus.PNG
-		..\..\..\00 - BIM\05 - REVIT API\05 - PROJECT C# ADDIN REVIT\03 - BEAB\Revit-logo.png = ..\..\..\00 - BIM\05 - REVIT API\05 - PROJECT C# ADDIN REVIT\03 - BEAB\Revit-logo.png
-		..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Réduire.PNG = ..\..\..\00 - BIM\05 - REVIT API\02 - C#\Code RazelBec\RZB_L14S\RZB_L14S\Resources\Réduire.PNG
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,7 +29,6 @@ Global
 		{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C} = {32356C62-8D57-4A56-A489-BE9ABA7C2F72}
 		{32356C62-8D57-4A56-A489-BE9ABA7C2F72} = {B43915A8-1B94-4F56-98AC-A9A61ED7F570}
 		{9714981E-40F2-411B-9CB3-DC52856DD6AE} = {B43915A8-1B94-4F56-98AC-A9A61ED7F570}
-		{4CBCAF9D-3BD2-4F25-9403-7E48B571AAFB} = {32356C62-8D57-4A56-A489-BE9ABA7C2F72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A419173-1A39-4AB6-875B-2CFD2CD92EF8}

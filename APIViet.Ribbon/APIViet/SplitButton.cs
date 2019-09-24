@@ -1,6 +1,7 @@
 #region Namespaces
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
@@ -12,24 +13,25 @@ namespace APIViet.Ribbon
 {
     public class SplitButton
     {
-        public SplitButton() {}
+        private RibbonPanel ribbonPanel { get; }
+        public SplitButton(RibbonPanel  ribbonPanel)
+        {
+            this.ribbonPanel = ribbonPanel;
+        }
 
         //PushButton
-        public void AddSplitButton(RibbonPanel panel, string btnName, string assembyName, string className, BitmapImage image, string btnTooltip)
+        public void AddSplitButton<T>(params IEnumerable<T>[] buttonDatas)
         {
-            //Set the information about the command we will be assigning to the button
-            PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assembyName, className);
-
-            //Add buton to panel
-            PushButton btn1 = panel.AddItem(btnData) as PushButton;
-            btn1.ToolTip = btnTooltip;
-            ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "http://www.autodesk.com");
-            btn1.SetContextualHelp(help);
-            IconControl img = new IconControl();
-            if (image != null)
+            foreach (var btnData in buttonDatas )
             {
-                btn1.LargeImage = image;
+                var btnDataValid = btnData as RibbonItemData;
+                if( btnDataValid != null)
+                {
+                    ribbonPanel.AddItem(btnDataValid);
+                }
+                
             }
         }
+       
     }
 }

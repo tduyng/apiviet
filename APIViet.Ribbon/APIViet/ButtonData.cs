@@ -10,15 +10,15 @@ using Autodesk.Revit.UI;
 
 namespace APIViet.Ribbon
 {
-    public class Button
+    public abstract class ButtonData
     {
-        public Button() {}
-       
+        protected ButtonData() { }
+
         //PushButton
-        
-        public void AddButton(RibbonPanel panel, string btnName, string assemblyName, string className, BitmapImage image, string btnTooltip)
+
+        public static PushButtonData GetButtonData(string btnName, string assembyName, string className, BitmapImage image, string btnTooltip)
         {
-            PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assemblyName, className);
+            PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assembyName, className);
 
             btnData.ToolTip = btnTooltip;
             ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "http://www.autodesk.com");
@@ -28,7 +28,7 @@ namespace APIViet.Ribbon
                 btnData.LargeImage = image;
             }
             //Add buton to panel
-            PushButton btn1 = panel.AddItem(btnData) as PushButton;
+            return btnData;
 
         }
 

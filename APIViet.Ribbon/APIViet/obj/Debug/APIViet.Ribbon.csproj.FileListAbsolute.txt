@@ -1,4 +1,8 @@
 C:\Users\tien-duy.nguyen\Source\Repos\APIViet.Ribbon\APIViet\obj\Debug\APIViet.Ribbon.csprojAssemblyReference.cache
 C:\Users\tien-duy.nguyen\Source\Repos\APIViet.Ribbon\APIViet\obj\Debug\APIViet.Ribbon.csproj.CoreCompileInputs.cache
-E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.Ribbon.csprojAssemblyReference.cache
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.Ribbon.csproj.CoreCompileInputs.cache
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\bin\Debug\APIViet.dll
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\bin\Debug\APIViet.pdb
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.dll
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.pdb
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.Ribbon.csprojAssemblyReference.cache

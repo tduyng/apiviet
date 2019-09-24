@@ -1,3 +1,4 @@
+using System.Resources;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -8,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("APIViet")]
 [assembly: AssemblyDescription("Revit Add-In Description for APIViet")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Autodesk Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("APIViet Revit C# .NET Add-In")]
-[assembly: AssemblyCopyright("Copyright 2018 (C) Jeremy Tammik, Autodesk Inc.")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,3 +35,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2019.0.0.0")]
 [assembly: AssemblyFileVersion("2019.0.0.0")]
+[assembly: NeutralResourcesLanguage("")]
+

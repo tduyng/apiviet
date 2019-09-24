@@ -62,17 +62,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonData.cs" />
+    <Compile Include="HelloWorld.cs" />
     <Compile Include="SplitButton.cs" />
-    <Compile Include="IconControl.cs" />
     <Compile Include="Button.cs" />
-    <Compile Include="Panel.cs" />
-    <Compile Include="AddControl.cs" />
-    <Compile Include="Tab.cs" />
+    <Compile Include="UIRibbon.cs" />
     <Compile Include="FirstProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="APIViet.addin" />
+    <EmbeddedResource Include="imgSources\Agrandir.PNG" />
+    <EmbeddedResource Include="imgSources\Aide.PNG" />
+    <EmbeddedResource Include="imgSources\BD_Agrandir.PNG" />
+    <EmbeddedResource Include="imgSources\BD_Aide.PNG" />
+    <EmbeddedResource Include="imgSources\BD_Fermer_1.PNG" />
+    <EmbeddedResource Include="imgSources\BD_Minimiser.PNG" />
+    <EmbeddedResource Include="imgSources\DB_Réduire.PNG" />
+    <EmbeddedResource Include="imgSources\Démarrer.png" />
+    <EmbeddedResource Include="imgSources\Fermer 2.PNG" />
+    <EmbeddedResource Include="imgSources\Fermer.png" />
+    <EmbeddedResource Include="imgSources\Fermer1.PNG" />
+    <EmbeddedResource Include="imgSources\Minimiser.PNG" />
+    <EmbeddedResource Include="imgSources\Plus.PNG" />
+    <EmbeddedResource Include="imgSources\Réduire.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
