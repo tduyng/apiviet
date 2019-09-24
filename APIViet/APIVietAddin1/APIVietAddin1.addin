@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command APIVietAddin1</Text>
+    <Description>Some description for APIVietAddin1</Description>
+    <Assembly>APIVietAddin1.dll</Assembly>
+    <FullClassName>APIVietAddin1.Command</FullClassName>
+    <ClientId>b0d7fc2c-fa77-4475-82be-5efa2a426877</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application APIVietAddin1</Name>
+    <Assembly>APIVietAddin1.dll</Assembly>
+    <FullClassName>APIVietAddin1.App</FullClassName>
+    <ClientId>4f7bbf52-dc56-49c6-8ec1-5e9cb768e356</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

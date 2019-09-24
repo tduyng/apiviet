@@ -20,9 +20,6 @@ namespace APIViet.Ribbon
     [Transaction(TransactionMode.Manual)]
     public class UIRibbon : IExternalApplication
     {
-        string controlName = "FirstProgram";
-        string dllExtension = ".dll";
-
         public Result OnStartup(UIControlledApplication uiApp)
         {
             
@@ -41,7 +38,7 @@ namespace APIViet.Ribbon
         private void AddControls(UIControlledApplication uiApp)
         {
             string assemblyName = Assembly.GetExecutingAssembly().Location;
-            string sourceImageName = "APIViet.ImgSources.";
+            string sourceImageName = "APIViet.Ribbon.ImgSources.";
 
             // Varibale const
             string tabName = "APIViet";

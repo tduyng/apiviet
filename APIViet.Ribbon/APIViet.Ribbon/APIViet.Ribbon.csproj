@@ -13,8 +13,8 @@
     <ProjectGuid>{FF2F45F9-55B7-42D0-B7C6-8E0B58BCBB3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>APIViet</RootNamespace>
-    <AssemblyName>APIViet</AssemblyName>
+    <RootNamespace>APIViet.Ribbon</RootNamespace>
+    <AssemblyName>APIViet.Ribbon</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -72,7 +72,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="APIViet.addin" />
+    <Content Include="APIViet.Ribbon.addin" />
     <EmbeddedResource Include="ImgSources\Revit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
