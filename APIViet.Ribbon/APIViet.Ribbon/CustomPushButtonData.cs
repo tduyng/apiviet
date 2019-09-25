@@ -10,9 +10,9 @@ using Autodesk.Revit.UI;
 
 namespace APIViet.Ribbon
 {
-    public abstract class ButtonData
+    public abstract class CustomPushButtonData
     {
-        protected ButtonData() { }
+        protected CustomPushButtonData() { }
 
         //PushButton
 
@@ -21,11 +21,10 @@ namespace APIViet.Ribbon
             PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assembyName, className);
 
             btnData.ToolTip = btnTooltip;
-            ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "http://www.autodesk.com");
+            ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
             btnData.SetContextualHelp(help);
             btnData.LargeImage = Image.ImageSource(imageName);
             return btnData;
-
         }
 
 

@@ -62,17 +62,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonData.cs" />
+    <Compile Include="CustomCombobox.cs" />
+    <Compile Include="CustomComboboxMember.cs" />
+    <Compile Include="CustomPulldownButton.cs" />
+    <Compile Include="CustomTextbox.cs" />
+    <Compile Include="CustomToggleButton.cs" />
+    <Compile Include="CustomSplitButton.cs" />
+    <Compile Include="CustomPushButtonData.cs" />
     <Compile Include="HelloWorld.cs" />
-    <Compile Include="SplitButton.cs" />
-    <Compile Include="Button.cs" />
-    <Compile Include="UIRibbon.cs" />
+    <Compile Include="CustomPushButton.cs" />
+    <Compile Include="StartProject.cs" />
+    <Compile Include="CustomUIRibbon.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="FirstProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="APIViet.Ribbon.addin" />
+    <EmbeddedResource Include="ImgSources\Revit_16x16.png" />
     <EmbeddedResource Include="ImgSources\Revit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

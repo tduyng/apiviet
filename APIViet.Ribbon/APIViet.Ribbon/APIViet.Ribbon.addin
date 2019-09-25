@@ -12,7 +12,7 @@
   <AddIn Type="Application">
     <Name>Add-In APIViet</Name>
     <Assembly>APIViet.Ribbon.dll</Assembly>
-    <FullClassName>APIViet.Ribbon.UIRibbon</FullClassName>
+    <FullClassName>APIViet.Ribbon.StartProject</FullClassName>
     <ClientId>1faeb7bf-5935-48a2-bc67-994e400fb9fd</ClientId>
     <VendorId>Tien Duy NGUYEN</VendorId>
     <VendorDescription>tienduy.nguyen@outlook.com</VendorDescription>

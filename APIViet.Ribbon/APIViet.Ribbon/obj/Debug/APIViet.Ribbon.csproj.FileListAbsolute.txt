@@ -11,3 +11,4 @@ E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\APIViet.Ribbon.pd
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.CoreCompileInputs.cache
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.dll
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.pdb
+E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csprojAssemblyReference.cache
