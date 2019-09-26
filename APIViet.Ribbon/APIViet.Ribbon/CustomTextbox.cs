@@ -16,26 +16,42 @@ namespace APIViet.Ribbon
        
         //PushButton
         
-        public static TextBox NewTextBox(RibbonPanel panel, string txtName, string imageName, string imageTooltip)
+        public static TextBox NewTextBox(RibbonPanel panel, string txtName, string normalImageName = "", string txtTooltip = "", string txtLongdescription ="", string promptText = "", bool isShowImageButton = true)
         {
             try
             {
                 TextBoxData txtData = new TextBoxData(txtName);
-                txtData.Image = Image.ImageSource(imageName);
+                txtData.Image = Image.ImageSource(normalImageName); //Using image 16x16
                 txtData.Name = txtName;
-                txtData.ToolTip = "Enter text here";
-                txtData.LongDescription = "<p>This is APIViet.</p><p>Ribbon Lab</p>";
-                txtData.ToolTipImage = Image.ImageSource(imageName);
+                if (string.IsNullOrWhiteSpace(txtTooltip))
+                {
+                    txtData.ToolTip = "Enter text here";
+                }
+                if(string.IsNullOrWhiteSpace(txtLongdescription))
+                {
+                    txtData.LongDescription = "<p>This is APIViet.</p><p>Ribbon Lab</p>";
+                }
+
+                txtData.ToolTipImage = Image.ImageSource(normalImageName);
+
                 TextBox txtBox = panel.AddItem(txtData) as TextBox;
-                txtBox.PromptText = "Enter a comment";
-                txtBox.ShowImageAsButton = true;
+                if (string.IsNullOrWhiteSpace(promptText))
+                {
+                    txtBox.PromptText = "Enter a comment";
+                }
+                
+                txtBox.ShowImageAsButton = isShowImageButton;
 
                 txtBox.EnterPressed += new EventHandler<Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs>(txtBox_EnterPressed);
                 txtBox.Width = 180;
 
                 return txtBox;
             }
-            catch { return null; }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
         }
         private static void txtBox_EnterPressed(object sender, Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs e)
         {

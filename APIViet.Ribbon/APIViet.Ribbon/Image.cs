@@ -20,11 +20,11 @@ namespace APIViet.Ribbon
 
     public class Image
     {
-        public static ImageSource ImageSource(string embededImageName)
+        public static ImageSource ImageSource(string embededlargeImageName)
         {
 
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
-            string imageExtension = Path.GetExtension(embededImageName);
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
+            string imageExtension = Path.GetExtension(embededlargeImageName);
             if (imageExtension.Equals(".png",StringComparison.CurrentCultureIgnoreCase))
             {
                 try
@@ -83,54 +83,54 @@ namespace APIViet.Ribbon
             return null;
         }
 
-        public static  ImageSource PngImageSource(string embededImageName)
+        public static  ImageSource PngImageSource(string embededlargeImageName)
         {
             try
             {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
                 var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 return decorder.Frames[0];
             }
             catch { return null; }
         }
-        public static ImageSource BmpImageSource(string embededImageName)
+        public static ImageSource BmpImageSource(string embededlargeImageName)
         {
             try
             {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
-                var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
-                return decorder.Frames[0];
-            }
-            catch { return null; }
-            
-        }
-        public static ImageSource JpegImageSource(string embededImageName)
-        {
-            try
-            {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
                 var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 return decorder.Frames[0];
             }
             catch { return null; }
             
         }
-        public static ImageSource IcoImageSource (string embededImageName)
+        public static ImageSource JpegImageSource(string embededlargeImageName)
         {
             try
             {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
                 var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 return decorder.Frames[0];
             }
             catch { return null; }
             
         }
-        public static ImageSource TiffImageSource(string embededImageName)
+        public static ImageSource IcoImageSource (string embededlargeImageName)
         {
             try
             {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededImageName);
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
+                var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+                return decorder.Frames[0];
+            }
+            catch { return null; }
+            
+        }
+        public static ImageSource TiffImageSource(string embededlargeImageName)
+        {
+            try
+            {
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
                 var decorder = new TiffBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                 return decorder.Frames[0];
             }
@@ -139,11 +139,11 @@ namespace APIViet.Ribbon
         }
 
 
-        public static BitmapImage GetIconFromAFolder( string imageFolder,string imageName)
+        public static BitmapImage GetIconFromAFolder( string imageFolder,string largeImageName)
         {
             try
             {
-                return new BitmapImage(new Uri(Path.Combine(imageFolder, imageName)));
+                return new BitmapImage(new Uri(Path.Combine(imageFolder, largeImageName)));
             }
             catch
             {

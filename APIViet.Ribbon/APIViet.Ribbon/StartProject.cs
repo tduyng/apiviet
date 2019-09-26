@@ -24,7 +24,6 @@ namespace APIViet.Ribbon
         public Result OnStartup(UIControlledApplication uiApp)
         {
             CustomUIRibbon customRibbon = new CustomUIRibbon();
-            
             customRibbon.CreateCustomTabAndPanel(uiApp);
             customRibbon.AddControlsInPanel_1(customRibbon.PanelByName(uiApp, customRibbon.TabName, customRibbon.PanelName1));
             customRibbon.AddControlsInPanel_2(customRibbon.PanelByName(uiApp, customRibbon.TabName, customRibbon.PanelName2));

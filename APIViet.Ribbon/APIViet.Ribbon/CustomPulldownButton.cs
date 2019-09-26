@@ -14,15 +14,19 @@ namespace APIViet.Ribbon
     public class CustomPulldownButton
     {
         public CustomPulldownButton() {}
-        public static PushButton NewButton(RibbonPanel panel, PulldownButton pulldownBtn, string btnName, string assemblyName, string className, string imageName, string btnTooltip)
+        public static PushButton NewButton(RibbonPanel panel, PulldownButton pulldownBtn, string btnName, string btnText,string assemblyName, string className, string largeImageName = "", string btnTooltip = "")
         {
             try
             {
-                PushButtonData btnData = CustomPushButtonData.GetButtonData(btnName, assemblyName, className, imageName, btnTooltip);
+                PushButtonData btnData = CustomPushButtonData.GetButtonData(btnName, btnText, assemblyName, className, largeImageName, btnTooltip);
                 PushButton btn = pulldownBtn.AddPushButton(btnData);
                 return btn;
             }
-            catch { return null; }
+            catch(Exception)
+            {
+                return null;
+                throw;
+            }
             
         }
     }

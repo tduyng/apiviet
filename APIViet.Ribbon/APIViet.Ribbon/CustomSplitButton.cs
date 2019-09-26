@@ -14,15 +14,19 @@ namespace APIViet.Ribbon
     public class CustomSplitButton
     {
         public CustomSplitButton() {}
-        public static PushButton NewButton(RibbonPanel panel, SplitButton splButton, string btnName, string assemblyName, string className, string imageName, string btnTooltip)
+        public static PushButton NewButton(RibbonPanel panel, SplitButton splButton, string btnName, string btnText,string assemblyName, string className, string largeImageName = "", string btnTooltip ="" )
         {
             try
             {
-                PushButtonData btnData = CustomPushButtonData.GetButtonData(btnName, assemblyName, className, imageName, btnTooltip);
+                PushButtonData btnData = CustomPushButtonData.GetButtonData(btnName, btnText,assemblyName, className, largeImageName, btnTooltip);
                 PushButton btn = splButton.AddPushButton(btnData);
                 return btn;
             }
-            catch { return null; }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
             
         }
     }

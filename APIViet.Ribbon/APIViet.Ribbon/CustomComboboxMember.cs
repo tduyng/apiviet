@@ -14,18 +14,22 @@ namespace APIViet.Ribbon
     public class CustomComboBoxMember
     {
         public CustomComboBoxMember() {}
-        public static ComboBoxMember NewComboBoxMember(RibbonPanel panel, ComboBox comboBox, string cboMemberDataName, string imageComboBoxMemberDataName, string cboMemberDataGroupName)
+        public static ComboBoxMember NewComboBoxMember(RibbonPanel panel, ComboBox comboBox, string cboMemberDataName,string cboMemberDataText, string cboMemberDataGroupName, string normalImageComboBoxMemberDataName="" )
         {
             try
             {
-                ComboBoxMemberData cboMemberData  = new ComboBoxMemberData("cbo" + cboMemberDataName, cboMemberDataName);
+                ComboBoxMemberData cboMemberData  = new ComboBoxMemberData(cboMemberDataName, cboMemberDataText);
                 cboMemberData.GroupName = cboMemberDataGroupName;
-                cboMemberData.Image = Image.ImageSource(imageComboBoxMemberDataName);
+                cboMemberData.Image = Image.ImageSource(normalImageComboBoxMemberDataName); //Using image 16x16
 
                 ComboBoxMember  cboMember = comboBox.AddItem(cboMemberData);
                 return cboMember;
             }
-            catch { return null; }
+            catch(Exception)
+            {  
+                return null;
+                throw;
+            }
             
         }
     }

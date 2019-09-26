@@ -14,24 +14,28 @@ namespace APIViet.Ribbon
     public class CustomComboBox
     {
         public CustomComboBox() {}
-        public static ComboBox NewComboBox(RibbonPanel panel, string cboName, string cboTooltip = "", string cboLongDescription = "")
+        public static ComboBox NewComboBox(RibbonPanel panel, string cboDataName,string cboName, string cboTooltip = "", string cboLongDescription = "")
         {
             try
             {
-                ComboBoxData cboData = new ComboBoxData("ComboBox1");
+                ComboBoxData cboData = new ComboBoxData(cboDataName);
                 ComboBox comboBox = panel.AddItem(cboData) as ComboBox;
-                if (cboTooltip == string.Empty)
+                if (string.IsNullOrWhiteSpace(cboTooltip))
                 {
                     comboBox.ToolTip = "Select an option";
                 }
-                if (cboLongDescription == string.Empty)
+                if (string.IsNullOrWhiteSpace(cboLongDescription))
                 {
                     comboBox.LongDescription = "Select a command you want to run";
                 }
                 comboBox.CurrentChanged += new EventHandler<Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs>(comboBox_CurrentChanged);
                 return comboBox;
             }
-            catch { return null; }
+            catch(Exception)
+            {
+                return null;
+                throw;
+            }
             
         }
         private static void comboBox_CurrentChanged(object sender, Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs e)

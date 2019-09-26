@@ -16,15 +16,23 @@ namespace APIViet.Ribbon
 
         //PushButton
 
-        public static PushButtonData GetButtonData(string btnName, string assembyName, string className, string imageName, string btnTooltip)
+        public static PushButtonData GetButtonData(string btnName, string btnText, string assembyName, string className, string largeImageName = "", string btnTooltip = "")
         {
-            PushButtonData btnData = new PushButtonData("btn" + btnName, btnName + Environment.NewLine, assembyName, className);
+            try
+            {
+                PushButtonData btnData = new PushButtonData(btnName, btnText, assembyName, className);
 
-            btnData.ToolTip = btnTooltip;
-            ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
-            btnData.SetContextualHelp(help);
-            btnData.LargeImage = Image.ImageSource(imageName);
-            return btnData;
+                btnData.ToolTip = btnTooltip;
+                ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
+                btnData.SetContextualHelp(help);
+                btnData.LargeImage = Image.ImageSource(largeImageName);
+                return btnData;
+            }
+            catch (Exception)
+            {
+                return  null;
+                throw;
+            }
         }
 
 
