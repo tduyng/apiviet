@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Linq;
+using APIViet.Ribbon.ImageUtils;
 #endregion
 
 namespace APIViet.Ribbon
@@ -53,8 +54,11 @@ namespace APIViet.Ribbon
         public void AddControlsInPanel_1(RibbonPanel panel)
         {
             AddPushButtonInPanel_1(panel);
+            panel.AddSeparator();
             AddSplitButtonInPanel_1(panel);
+            panel.AddSeparator();
             AddPulldownButtonInPanel_1(panel);
+            panel.AddSeparator();
             AddTogleButtonInPanel_1(panel);
             AddComboBoxInPanel_1(panel);
             AddTextBoxInPanel_1(panel);
@@ -76,12 +80,14 @@ namespace APIViet.Ribbon
         #region Detail of controls in the panel 1
         private void AddPushButtonInPanel_1(RibbonPanel panel)
         {
-            PushButton bt11 = CustomPushButton.NewButton(panel, "btnA11","Button A1", assemblyName, "APIViet.Ribbon.HelloWorld", 
-                                                         largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png", 
-                                                         btnTooltip:"To show a message Hello World!");
-            PushButton bt12 = CustomPushButton.NewButton(panel, "btnA12","Button A2", assemblyName, "APIViet.Ribbon.HelloWorld", 
-                                                         largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png", 
-                                                         btnTooltip: "To show a message Hello World!");
+            //PushButton bt11 = CustomPushButton.NewButton(panel, "btnA11","Button A1", assemblyName, "APIViet.Ribbon.HelloWorld", 
+            //                                             largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png", 
+            //                                             btnTooltip:"To show a message Hello World!");
+            //PushButton bt12 = CustomPushButton.NewButton(panel, "btnA12","Button A2", assemblyName, "APIViet.Ribbon.HelloWorld", 
+            //                                             largeImageName: sourceImageName + "circle_royal-blue_16x16.png", 
+            //                                             btnTooltip: "To show a message Hello World!");
+           
+
         }
         private void AddSplitButtonInPanel_1(RibbonPanel panel)
         {
@@ -105,43 +111,43 @@ namespace APIViet.Ribbon
         }
         private void AddPulldownButtonInPanel_1(RibbonPanel panel)
         {
-            PulldownButtonData pulldownBtnData = new PulldownButtonData("pulBtn1", "Pulldown\nButton");
-            PulldownButton pulldownBtn = panel.AddItem(pulldownBtnData) as PulldownButton;
-            pulldownBtn.Image = Image.ImageSource(sourceImageName + "circle_orange_16x16.png");
-            PushButton btnA121 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase1","Case 1", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                               largeImageName: sourceImageName + "circle_orange_16x16.png", 
-                                                               btnTooltip: "To show a message Hello World!");
-            PushButton btnA122 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase2","Case 2", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                               largeImageName: sourceImageName + "circle_orange_16x16.png",
-                                                               btnTooltip: "To show a message Hello World!");
-            PushButton btnA123 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase3","Case 3", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                               largeImageName: sourceImageName + "circle_orange_16x16.png", 
-                                                               btnTooltip: "To show a message Hello World!");
-            PushButton btnA124 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase4","Case 4", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                               largeImageName: sourceImageName + "circle_orange_16x16.png", 
-                                                               btnTooltip: "To show a message Hello World!");
-            PushButton btnA125 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase5","Case 5", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                               largeImageName: sourceImageName + "circle_orange_16x16.png", 
-                                                               btnTooltip: "To show a message Hello World!");
+            //PulldownButtonData pulldownBtnData = new PulldownButtonData("pulBtn1", "Pulldown\nButton");
+            //PulldownButton pulldownBtn = panel.AddItem(pulldownBtnData) as PulldownButton;
+            //pulldownBtn.Image = IconRibbon.GetBmpImageFromSource(sourceImageName + "circle_orange_16x16.png");
+            //PushButton btnA121 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase1","Case 1", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                                   largeImageName: sourceImageName + "circle_orange_16x16.png", 
+            //                                                   btnTooltip: "To show a message Hello World!");
+            //PushButton btnA122 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase2","Case 2", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                                   largeImageName: sourceImageName + "circle_orange_16x16.png",
+            //                                                   btnTooltip: "To show a message Hello World!");
+            //PushButton btnA123 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase3","Case 3", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                                   largeImageName: sourceImageName + "circle_orange_16x16.png", 
+            //                                                   btnTooltip: "To show a message Hello World!");
+            //PushButton btnA124 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase4","Case 4", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                                   largeImageName: sourceImageName + "circle_orange_16x16.png", 
+            //                                                   btnTooltip: "To show a message Hello World!");
+            //PushButton btnA125 = CustomPulldownButton.NewButton(panel, pulldownBtn, "btnCase5","Case 5", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                                   largeImageName: sourceImageName + "circle_orange_16x16.png", 
+            //                                                   btnTooltip: "To show a message Hello World!");
         }
         private void AddTogleButtonInPanel_1(RibbonPanel panel)
         {
             RadioButtonGroupData rdoBtnGroupData = new RadioButtonGroupData("RadioButton1");
             RadioButtonGroup rdoBtnGroup = panel.AddItem(rdoBtnGroupData) as RadioButtonGroup;
             ToggleButton btn121 = CustomToggleButton.NewToggleButton(panel, rdoBtnGroup,"togOpt1", "Op 1", assemblyName, "APIViet.Ribbon.HelloWorld", 
-                                                                     normalImageName: sourceImageName + "square_caribean-blue_16x16.png",
+                                                                     smallImageName: sourceImageName + "square_caribean-blue_16x16.png",
                                                                      btnTooltip: "First Option");
             ToggleButton btn122 = CustomToggleButton.NewToggleButton(panel, rdoBtnGroup, "togOpt2","Op 2", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                                     normalImageName: sourceImageName + "square_guacamole-green_16x16.png",
+                                                                     smallImageName: sourceImageName + "square_guacamole-green_16x16.png",
                                                                      btnTooltip: "Second Option");
             ToggleButton btn123 = CustomToggleButton.NewToggleButton(panel, rdoBtnGroup,"togOpt3", "Op 3", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                                     normalImageName: sourceImageName + "square_orage_16x16.png",
+                                                                     smallImageName: sourceImageName + "square_orage_16x16.png",
                                                                      btnTooltip: "Third Option");
             ToggleButton btn124 = CustomToggleButton.NewToggleButton(panel, rdoBtnGroup, "togOpt4","Op 4", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                                     normalImageName: sourceImageName + "square_royal-blue_16x16.png", 
+                                                                     smallImageName: sourceImageName + "square_royal-blue_16x16.png", 
                                                                      btnTooltip: "Fourth Option");
             ToggleButton btn125 = CustomToggleButton.NewToggleButton(panel, rdoBtnGroup,"togOpt5", "Op 5", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                                     normalImageName: sourceImageName + "square_soylent-red_16x16.png", 
+                                                                     smallImageName: sourceImageName + "square_soylent-red_16x16.png", 
                                                                      btnTooltip: "Last Option");
         }
         private void AddTextBoxInPanel_1(RibbonPanel panel)
@@ -154,6 +160,7 @@ namespace APIViet.Ribbon
         }
         private void AddComboBoxInPanel_1(RibbonPanel panel)
         {
+            //IList<RibbonItem> stackedItems = panel.AddStackedItems()
             ComboBox comboBox11 = CustomComboBox.NewComboBox(panel,"cboData1","cbo11");
             ComboBoxMember cboMember111 = CustomComboBoxMember.NewComboBoxMember(panel, comboBox11, "cboData1","Data 1", "Group 1", sourceImageName + "emoticon-30_royal-blue_16x16.png");
             ComboBoxMember cboMember112 = CustomComboBoxMember.NewComboBoxMember(panel, comboBox11, "cboData2","Data 2", "Group 1", sourceImageName + "emoticon-30_royal-blue_16x16.png");
@@ -175,12 +182,12 @@ namespace APIViet.Ribbon
         #region Detail of controls in the panel 2
         private void AddPushButtonInPanel_2(RibbonPanel panel)
         {
-            PushButton btB11 = CustomPushButton.NewButton(panel, "btnB11", "Button B1", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                        largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
-                                                        btnTooltip: "To show a message Hello World!");
-            PushButton btB12 = CustomPushButton.NewButton(panel, "btnB12", "Button B2", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                         largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
-                                                         btnTooltip: "To show a message Hello World!");
+            //PushButton btB11 = CustomPushButton.NewButton(panel, "btnB11", "Button B1", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                            largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
+            //                                            btnTooltip: "To show a message Hello World!");
+            //PushButton btB12 = CustomPushButton.NewButton(panel, "btnB12", "Button B2", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                             largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
+            //                                             btnTooltip: "To show a message Hello World!");
         }
     
         private void AddSplitButtonInPanel_2(RibbonPanel panel)
@@ -211,12 +218,12 @@ namespace APIViet.Ribbon
         #region Detail of controls in the panel 3
         private void AddPushButtonInPanel_3(RibbonPanel panel)
         {
-            PushButton btC11 = CustomPushButton.NewButton(panel, "btnC11", "Button C1", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                         largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
-                                                         btnTooltip: "To show a message Hello World!");
-            PushButton btC12 = CustomPushButton.NewButton(panel, "btnC12", "Button C2", assemblyName, "APIViet.Ribbon.HelloWorld",
-                                                         largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
-                                                         btnTooltip: "To show a message Hello World!");
+            //PushButton btC11 = CustomPushButton.NewButton(panel, "btnC11", "Button C1", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                             largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
+            //                                             btnTooltip: "To show a message Hello World!");
+            //PushButton btC12 = CustomPushButton.NewButton(panel, "btnC12", "Button C2", assemblyName, "APIViet.Ribbon.HelloWorld",
+            //                                             largeImageName: sourceImageName + "arrow_carribean-blue_32x32.png",
+            //                                             btnTooltip: "To show a message Hello World!");
         }
         private void AddSplitButtonInPanel_3(RibbonPanel panel)
         {

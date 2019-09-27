@@ -12,15 +12,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 #endregion
 
-namespace APIViet.Ribbon
+namespace APIViet.Ribbon.ImageUtils
 {
     /// <summary>
     /// Get image
     /// </summary>
 
-    public class Image
+    public class IconRibbon
     {
-        public static ImageSource ImageSource(string embededlargeImageName)
+        public static ImageSource GetEmbededImageFromSource(string embededlargeImageName)
         {
 
             Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
@@ -83,7 +83,7 @@ namespace APIViet.Ribbon
             return null;
         }
 
-        public static  ImageSource PngImageSource(string embededlargeImageName)
+        public static  ImageSource GetPngImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -93,18 +93,7 @@ namespace APIViet.Ribbon
             }
             catch { return null; }
         }
-        public static ImageSource BmpImageSource(string embededlargeImageName)
-        {
-            try
-            {
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
-                var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
-                return decorder.Frames[0];
-            }
-            catch { return null; }
-            
-        }
-        public static ImageSource JpegImageSource(string embededlargeImageName)
+        public static ImageSource GetBmpImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -115,7 +104,7 @@ namespace APIViet.Ribbon
             catch { return null; }
             
         }
-        public static ImageSource IcoImageSource (string embededlargeImageName)
+        public static ImageSource GetJpegImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -126,7 +115,18 @@ namespace APIViet.Ribbon
             catch { return null; }
             
         }
-        public static ImageSource TiffImageSource(string embededlargeImageName)
+        public static ImageSource GetIcoImageFromSource (string embededlargeImageName)
+        {
+            try
+            {
+                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
+                var decorder = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
+                return decorder.Frames[0];
+            }
+            catch { return null; }
+            
+        }
+        public static ImageSource GetTiffImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -139,11 +139,11 @@ namespace APIViet.Ribbon
         }
 
 
-        public static BitmapImage GetIconFromAFolder( string imageFolder,string largeImageName)
+        public static BitmapImage GetIconFromAFolder( string imageFolder,string imageFullName)
         {
             try
             {
-                return new BitmapImage(new Uri(Path.Combine(imageFolder, largeImageName)));
+                return new BitmapImage(new Uri(Path.Combine(imageFolder, imageFullName)));
             }
             catch
             {

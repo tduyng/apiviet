@@ -6,6 +6,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using APIViet.Ribbon.ImageUtils;
 #endregion
 
 namespace APIViet.Ribbon
@@ -25,7 +26,7 @@ namespace APIViet.Ribbon
                 btnData.ToolTip = btnTooltip;
                 ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
                 btnData.SetContextualHelp(help);
-                btnData.LargeImage = Image.ImageSource(largeImageName);
+                btnData.LargeImage = IconRibbon.GetEmbededImageFromSource(largeImageName);
                 return btnData;
             }
             catch (Exception)

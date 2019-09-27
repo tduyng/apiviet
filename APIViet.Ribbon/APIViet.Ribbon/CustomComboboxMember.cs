@@ -20,7 +20,7 @@ namespace APIViet.Ribbon
             {
                 ComboBoxMemberData cboMemberData  = new ComboBoxMemberData(cboMemberDataName, cboMemberDataText);
                 cboMemberData.GroupName = cboMemberDataGroupName;
-                cboMemberData.Image = Image.ImageSource(normalImageComboBoxMemberDataName); //Using image 16x16
+                cboMemberData.Image = ImageIcon.ImageSource(normalImageComboBoxMemberDataName); //Using image 16x16
 
                 ComboBoxMember  cboMember = comboBox.AddItem(cboMemberData);
                 return cboMember;

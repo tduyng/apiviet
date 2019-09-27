@@ -16,12 +16,12 @@ namespace APIViet.Ribbon
        
         //PushButton
         
-        public static TextBox NewTextBox(RibbonPanel panel, string txtName, string normalImageName = "", string txtTooltip = "", string txtLongdescription ="", string promptText = "", bool isShowImageButton = true)
+        public static TextBox NewTextBox(RibbonPanel panel, string txtName, string smallImageName = "", string txtTooltip = "", string txtLongdescription ="", string promptText = "", bool isShowImageButton = true)
         {
             try
             {
                 TextBoxData txtData = new TextBoxData(txtName);
-                txtData.Image = Image.ImageSource(normalImageName); //Using image 16x16
+                txtData.Image = ImageIcon.ImageSource(smallImageName); //Using image 16x16
                 txtData.Name = txtName;
                 if (string.IsNullOrWhiteSpace(txtTooltip))
                 {
@@ -29,10 +29,10 @@ namespace APIViet.Ribbon
                 }
                 if(string.IsNullOrWhiteSpace(txtLongdescription))
                 {
-                    txtData.LongDescription = "<p>This is APIViet.</p><p>Ribbon Lab</p>";
+                    txtData.LongDescription = "<p>This is APIViet.</p><p>CustomRibbon</p>";
                 }
 
-                txtData.ToolTipImage = Image.ImageSource(normalImageName);
+                txtData.ToolTipImage = ImageIcon.ImageSource(smallImageName);
 
                 TextBox txtBox = panel.AddItem(txtData) as TextBox;
                 if (string.IsNullOrWhiteSpace(promptText))

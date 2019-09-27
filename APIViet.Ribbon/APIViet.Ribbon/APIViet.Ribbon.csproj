@@ -40,6 +40,9 @@
     <StartProgram>$(ProgramW6432)\Autodesk\Revit 2019\Revit.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\AdWindows.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -59,12 +62,21 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIFramework">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\UIFramework.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomStackedItem.cs" />
+    <Compile Include="CustomRibbon.cs" />
+    <Compile Include="CustomTab.cs" />
+    <Compile Include="CustomPanel.cs" />
+    <Compile Include="ImageUtils\BitmapSourceConverter.cs" />
     <Compile Include="CustomCombobox.cs" />
     <Compile Include="CustomComboboxMember.cs" />
     <Compile Include="CustomPulldownButton.cs" />
+    <Compile Include="CustomRibbonItem.cs" />
     <Compile Include="CustomTextbox.cs" />
     <Compile Include="CustomToggleButton.cs" />
     <Compile Include="CustomSplitButton.cs" />
@@ -73,7 +85,7 @@
     <Compile Include="CustomPushButton.cs" />
     <Compile Include="StartProject.cs" />
     <Compile Include="CustomUIRibbon.cs" />
-    <Compile Include="Image.cs" />
+    <Compile Include="ImageUtils\IconRibbon.cs" />
     <Compile Include="FirstProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

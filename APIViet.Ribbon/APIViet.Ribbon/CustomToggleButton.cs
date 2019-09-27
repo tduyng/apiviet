@@ -14,12 +14,12 @@ namespace APIViet.Ribbon
     public class CustomToggleButton
     {
         public CustomToggleButton() {}
-        public static ToggleButton NewToggleButton(RibbonPanel panel,RadioButtonGroup rdoBtnGroup, string togBtnName,string togBtnText, string assemblyName, string className, string normalImageName ="", string btnTooltip = "")
+        public static ToggleButton NewToggleButton(RibbonPanel panel,RadioButtonGroup rdoBtnGroup, string togBtnName,string togBtnText, string assemblyName, string className, string smallImageName ="", string btnTooltip = "")
         {
             try
             {
                 ToggleButtonData togBtnData =new ToggleButtonData(togBtnName, togBtnText, assemblyName, className);
-                togBtnData.LargeImage = Image.ImageSource(normalImageName); //Using image 16x16
+                togBtnData.LargeImage = ImageIcon.ImageSource(smallImageName); //Using image 16x16
                 togBtnData.ToolTip = btnTooltip;
                 ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
                 togBtnData.SetContextualHelp(help);
