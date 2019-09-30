@@ -18,72 +18,55 @@ namespace APIViet.Ribbon.ImageUtils
     /// Get image
     /// </summary>
 
-    public class IconRibbon
+    public static class IconRibbon
     {
+        // Case: when we dont bother the extention of image input and return an imagsesource of Image
         public static ImageSource GetEmbededImageFromSource(string embededlargeImageName)
         {
-
-            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
-            string imageExtension = Path.GetExtension(embededlargeImageName);
-            if (imageExtension.Equals(".png",StringComparison.CurrentCultureIgnoreCase))
+            try
             {
-                try
+                Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(embededlargeImageName);
+                string imageExtension = Path.GetExtension(embededlargeImageName);
+
+                if (imageExtension.Equals(".png", StringComparison.CurrentCultureIgnoreCase))
                 {
                     PngBitmapDecoder img = new PngBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                     return img.Frames[0];
                 }
-                catch { return null; }
 
-            }
-
-            if (imageExtension.Equals(".bmp", StringComparison.CurrentCultureIgnoreCase))
-            {
-                try
+                if (imageExtension.Equals(".bmp", StringComparison.CurrentCultureIgnoreCase))
                 {
                     BmpBitmapDecoder img = new BmpBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                     return img.Frames[0];
+
                 }
-                 catch{return null;}
 
-            }
-
-            if (imageExtension.Equals(".jpeg", StringComparison.CurrentCultureIgnoreCase))
-            {
-                try
+                if (imageExtension.Equals(".jpeg", StringComparison.CurrentCultureIgnoreCase))
                 {
                     JpegBitmapDecoder img = new JpegBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                     return img.Frames[0];
-                }
-                catch { return null; }
-                
-            }
 
-            if (imageExtension.Equals(".tiff", StringComparison.CurrentCultureIgnoreCase))
-            {
-                try
+                }
+
+                if (imageExtension.Equals(".tiff", StringComparison.CurrentCultureIgnoreCase))
                 {
                     TiffBitmapDecoder img = new TiffBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                     return img.Frames[0];
-                }
-                catch { return null; }
-                
-            }
 
-            if (imageExtension.Equals(".ico", StringComparison.CurrentCultureIgnoreCase))
-            {
-                try
+                }
+
+                if (imageExtension.Equals(".ico", StringComparison.CurrentCultureIgnoreCase))
                 {
                     IconBitmapDecoder img = new IconBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.Default);
                     return img.Frames[0];
                 }
-                catch { return null; }
-                
             }
-
+            catch { return null; }
             return null;
         }
 
-        public static  ImageSource GetPngImageFromSource(string embededlargeImageName)
+        //Case specific for each type of image input
+        public static ImageSource GetPngImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -102,7 +85,7 @@ namespace APIViet.Ribbon.ImageUtils
                 return decorder.Frames[0];
             }
             catch { return null; }
-            
+
         }
         public static ImageSource GetJpegImageFromSource(string embededlargeImageName)
         {
@@ -113,9 +96,9 @@ namespace APIViet.Ribbon.ImageUtils
                 return decorder.Frames[0];
             }
             catch { return null; }
-            
+
         }
-        public static ImageSource GetIcoImageFromSource (string embededlargeImageName)
+        public static ImageSource GetIcoImageFromSource(string embededlargeImageName)
         {
             try
             {
@@ -124,7 +107,7 @@ namespace APIViet.Ribbon.ImageUtils
                 return decorder.Frames[0];
             }
             catch { return null; }
-            
+
         }
         public static ImageSource GetTiffImageFromSource(string embededlargeImageName)
         {
@@ -135,11 +118,11 @@ namespace APIViet.Ribbon.ImageUtils
                 return decorder.Frames[0];
             }
             catch { return null; }
-            
+
         }
 
 
-        public static BitmapImage GetIconFromAFolder( string imageFolder,string imageFullName)
+        public static BitmapImage GetIconFromAFolder(string imageFolder, string imageFullName)
         {
             try
             {
@@ -154,4 +137,4 @@ namespace APIViet.Ribbon.ImageUtils
     }
 
 
- }
+}

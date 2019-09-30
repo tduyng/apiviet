@@ -71,11 +71,8 @@ namespace APIViet.Ribbon
                 ribbonPanel = _ribbon.Application.CreateRibbonPanel(_name, panelTitle);
             else
                 ribbonPanel = _ribbon.Application.CreateRibbonPanel(_systemTab.Value, panelTitle);
-
-
-
-
             return new CustomPanel(this, ribbonPanel);
 
         }
+    }
 }

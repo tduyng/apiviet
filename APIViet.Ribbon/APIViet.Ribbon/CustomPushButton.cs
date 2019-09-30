@@ -1,3 +1,12 @@
+/* 
+ * Learn solution of Victor Chekalin
+ * 
+ * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+ * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+ * PARTICULAR PURPOSE.
+ * 
+ */
 #region Namespaces
 using System;
 using System.Collections.Generic;
@@ -47,7 +56,7 @@ namespace APIViet.Ribbon
 
         public CustomPushButton SetLargeImage(Bitmap largeImage)
         {
-            _largeImage = BitmapSourceConverter.ConvertFromImage(largeImage);
+            _largeImage = BitmapSourceConverter.ConvertFromBitmap(largeImage);
             return this;
         }
 
@@ -59,7 +68,7 @@ namespace APIViet.Ribbon
 
         public CustomPushButton SetSmallImage(Bitmap smallImage)
         {
-            _smallImage = BitmapSourceConverter.ConvertFromImage(smallImage);
+            _smallImage = BitmapSourceConverter.ConvertFromBitmap(smallImage);
             return this;
         }
 

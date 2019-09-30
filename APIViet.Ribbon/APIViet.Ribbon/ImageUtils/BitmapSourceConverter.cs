@@ -1,5 +1,5 @@
 ﻿/* 
- * Copyright 2012 © Victor Chekalin
+ * Lear solution of Victor Chekalin
  */
 
 
@@ -43,8 +43,7 @@ namespace APIViet.Ribbon.ImageUtils
                 var bs = Imaging
                     .CreateBitmapSourceFromHIcon(icon.Handle,
                                                  new Int32Rect(0, 0, icon.Width, icon.Height),
-                                                 BitmapSizeOptions.FromWidthAndHeight(icon.Width,
-                                                                                      icon.Height));
+                                                 BitmapSizeOptions.FromWidthAndHeight(icon.Width,icon.Height));
                 return bs;
             }
             finally

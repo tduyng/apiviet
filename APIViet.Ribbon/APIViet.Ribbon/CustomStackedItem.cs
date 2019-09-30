@@ -20,6 +20,7 @@ namespace APIViet.Ribbon
         {
             _panel = panel;
             _buttons = new List<CustomPushButton>(3);
+           
         }
 
         public CustomStackedItem CreateButton<TExternalCommandClass>(string name,

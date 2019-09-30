@@ -80,9 +80,13 @@
     <Compile Include="CustomTextbox.cs" />
     <Compile Include="CustomToggleButton.cs" />
     <Compile Include="CustomSplitButton.cs" />
-    <Compile Include="CustomPushButtonData.cs" />
     <Compile Include="HelloWorld.cs" />
     <Compile Include="CustomPushButton.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartProject.cs" />
     <Compile Include="CustomUIRibbon.cs" />
     <Compile Include="ImageUtils\IconRibbon.cs" />
@@ -91,24 +95,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="APIViet.Ribbon.addin" />
-    <EmbeddedResource Include="ImgSources\circle_caribbean-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\square_guacamole-green_16x16.png" />
-    <EmbeddedResource Include="ImgSources\circle_babie pink_16x16.png" />
-    <EmbeddedResource Include="ImgSources\circle_guacamole-green_16x16.png" />
-    <EmbeddedResource Include="ImgSources\circle_orange_16x16.png" />
-    <EmbeddedResource Include="ImgSources\circle_royal-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\emoticon-30_royal-blue-32x32.png" />
-    <EmbeddedResource Include="ImgSources\emoticon-30_royal-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\arrow_carribean-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\arrow_carribean-blue_32x32.png" />
-    <EmbeddedResource Include="ImgSources\info_caribbeab-blue_32x32.png" />
-    <EmbeddedResource Include="ImgSources\info_caribbean-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\square_caribean-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\square_orage_16x16.png" />
-    <EmbeddedResource Include="ImgSources\square_royal-blue_16x16.png" />
-    <EmbeddedResource Include="ImgSources\square_soylent-red_16x16.png" />
-    <EmbeddedResource Include="ImgSources\Revit_16x16.png" />
-    <EmbeddedResource Include="ImgSources\Revit.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APIViet\APIVietAddin1\APIVietAddin1.csproj">
+      <Project>{dcf23377-e4cd-47f1-a207-6c51fb76d469}</Project>
+      <Name>APIVietAddin1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImgSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
