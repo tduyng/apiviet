@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Linq;
 using APIVietAddin1;
-using APIViet.Ribbon.ImageUtils;
+using APIViet.Ribbon.Helpers;
 using APIViet.Ribbon.Properties;
 #endregion
 

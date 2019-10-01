@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\APIViet.Ribbon",
-    "\\APIViet.Ribbon\\APIViet",
-    "\\APIViet.Ribbon\\APIViet\\bin",
-    "\\APIViet.Ribbon\\APIViet\\Properties"
+    "\\APIViet.Ribbon\\APIViet.Ribbon"
   ],
+  "SelectedNode": "\\APIViet",
   "PreviewInSolutionExplorer": false
 }

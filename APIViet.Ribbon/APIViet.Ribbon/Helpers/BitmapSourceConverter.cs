@@ -9,7 +9,7 @@ using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 
-namespace APIViet.Ribbon.ImageUtils
+namespace APIViet.Ribbon.Helpers
 {
     public static class BitmapSourceConverter
     {
@@ -18,6 +18,8 @@ namespace APIViet.Ribbon.ImageUtils
 
         public static BitmapSource ConvertFromBitmap(Bitmap image)
         {
+            if (image == null)
+                throw new ArgumentNullException(nameof(image));
             //Intptr: A handle to the GDI bitmap object that this method creates.
             IntPtr hBitmap = image.GetHbitmap();
             try

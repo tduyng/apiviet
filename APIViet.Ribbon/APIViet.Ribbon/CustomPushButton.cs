@@ -17,7 +17,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using APIViet.Ribbon.ImageUtils;
+using APIViet.Ribbon.Helpers;
 #endregion
 
 namespace APIViet.Ribbon
@@ -29,6 +29,7 @@ namespace APIViet.Ribbon
         private readonly string _className;
         protected ImageSource _largeImage;
         protected ImageSource _smallImage;
+        protected string _tooltips;
         protected string _description;
         private string _assemblyLocation;
         protected ContextualHelp _contextualHelp;
@@ -59,19 +60,40 @@ namespace APIViet.Ribbon
             _largeImage = BitmapSourceConverter.ConvertFromBitmap(largeImage);
             return this;
         }
+        public CustomPushButton SetLargeImage(Icon largeImage)
+        {
+            _largeImage = BitmapSourceConverter.ConvertFromIcon(largeImage);
+            return this;
+        }
+        public CustomPushButton SetLargeImage(string largeImageFullName)
+        {
+            _largeImage = IconRibbon.GetEmbededImageFromSource(largeImageFullName);
+            return this;
+        }
 
+        //Set small Image
         public CustomPushButton SetSmallImage(ImageSource smallImage)
         {
             _smallImage = smallImage;
             return this;
         }
-
         public CustomPushButton SetSmallImage(Bitmap smallImage)
         {
             _smallImage = BitmapSourceConverter.ConvertFromBitmap(smallImage);
             return this;
         }
+        public CustomPushButton SetSmallImage(Icon smallImage)
+        {
+            _smallImage = BitmapSourceConverter.ConvertFromIcon(smallImage);
+            return this;
+        }
+        public CustomPushButton SetSmallImage(string smallImageFullName)
+        {
+            _smallImage = IconRibbon.GetEmbededImageFromSource(smallImageFullName);
+            return this;
+        }
 
+        //PushButtonData
         internal virtual ButtonData Finish()
         {
             PushButtonData pushButtonData =
@@ -89,7 +111,10 @@ namespace APIViet.Ribbon
             {
                 pushButtonData.Image = _smallImage;
             }
-
+            if (_tooltips!= null)
+            {
+                pushButtonData.ToolTip = _tooltips;
+            }
             if (_description != null)
             {
                 pushButtonData.LongDescription = _description;
@@ -104,7 +129,12 @@ namespace APIViet.Ribbon
 
             return pushButtonData;
         }
+        public CustomPushButton SetToolTips(string tooltips)
+        {
+            _description = tooltips;
 
+            return this;
+        }
         public CustomPushButton SetLongDescription(string description)
         {
             _description = description;
@@ -148,6 +178,6 @@ namespace APIViet.Ribbon
         //        return null;
         //        throw;
         //    }
-    //}
+        //}
     }
 }

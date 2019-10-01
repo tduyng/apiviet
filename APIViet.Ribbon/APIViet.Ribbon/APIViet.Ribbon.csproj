@@ -72,7 +72,7 @@
     <Compile Include="CustomRibbon.cs" />
     <Compile Include="CustomTab.cs" />
     <Compile Include="CustomPanel.cs" />
-    <Compile Include="ImageUtils\BitmapSourceConverter.cs" />
+    <Compile Include="Helpers\BitmapSourceConverter.cs" />
     <Compile Include="CustomCombobox.cs" />
     <Compile Include="CustomComboboxMember.cs" />
     <Compile Include="CustomPulldownButton.cs" />
@@ -89,7 +89,7 @@
     </Compile>
     <Compile Include="StartProject.cs" />
     <Compile Include="CustomUIRibbon.cs" />
-    <Compile Include="ImageUtils\IconRibbon.cs" />
+    <Compile Include="Helpers\IconRibbon.cs" />
     <Compile Include="FirstProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
