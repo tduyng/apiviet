@@ -9,11 +9,8 @@
  */
 #region Namespaces
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
@@ -29,7 +26,7 @@ namespace APIViet.Ribbon
         private readonly string _className;
         protected ImageSource _largeImage;
         protected ImageSource _smallImage;
-        protected string _tooltips;
+        protected string _toolTips;
         protected string _description;
         private string _assemblyLocation;
         protected ContextualHelp _contextualHelp;
@@ -92,6 +89,29 @@ namespace APIViet.Ribbon
             _smallImage = IconRibbon.GetEmbededImageFromSource(smallImageFullName);
             return this;
         }
+  
+        public CustomPushButton SetToolTips(string toolTips)
+        {
+            _description = toolTips;
+            return this;
+        }
+        public CustomPushButton SetLongDescription(string description)
+        {
+            _description = description;
+            return this;
+        }
+
+        public CustomPushButton SetContextualHelp(ContextualHelpType contextualHelpType, string helpPath)
+        {
+            _contextualHelp = new ContextualHelp(contextualHelpType, helpPath);
+            return this;
+        }
+
+        public CustomPushButton SetHelpUrl(string url)
+        {
+            _contextualHelp = new ContextualHelp(ContextualHelpType.Url, url);
+            return this;
+        }
 
         //PushButtonData
         internal virtual ButtonData Finish()
@@ -111,73 +131,19 @@ namespace APIViet.Ribbon
             {
                 pushButtonData.Image = _smallImage;
             }
-            if (_tooltips!= null)
+            if (!string.IsNullOrWhiteSpace(_toolTips))
             {
-                pushButtonData.ToolTip = _tooltips;
+                pushButtonData.ToolTip = _toolTips;
             }
-            if (_description != null)
+            if (!string.IsNullOrWhiteSpace(_description))
             {
                 pushButtonData.LongDescription = _description;
             }
-
             if (_contextualHelp != null)
             {
                 pushButtonData.SetContextualHelp(_contextualHelp);
             }
-
-            //_panel.Source.AddItem(pushButtonData);
-
             return pushButtonData;
         }
-        public CustomPushButton SetToolTips(string tooltips)
-        {
-            _description = tooltips;
-
-            return this;
-        }
-        public CustomPushButton SetLongDescription(string description)
-        {
-            _description = description;
-
-            return this;
-        }
-
-        public CustomPushButton SetContextualHelp(ContextualHelpType contextualHelpType, string helpPath)
-        {
-            _contextualHelp = new ContextualHelp(contextualHelpType, helpPath);
-
-            return this;
-        }
-
-        public CustomPushButton SetHelpUrl(string url)
-        {
-            _contextualHelp = new ContextualHelp(ContextualHelpType.Url, url);
-
-            return this;
-        }
-
-
-        //public CustomPushButton() {}
-        //public static PushButton NewButton(RibbonPanel panel, string btnName,string btnText, string assemblyName, string className, string largeImageName ="", string btnTooltip ="")
-        //{
-        //    try
-        //    {
-        //        PushButtonData btnData = new PushButtonData(btnName, btnText, assemblyName, className);
-
-        //        btnData.ToolTip = btnTooltip;
-        //        ContextualHelp help = new ContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com");
-        //        btnData.SetContextualHelp(help);
-        //        btnData.Image = ImageIcon.ImageSource(largeImageName);
-
-        //        //Add buton to panel
-        //        PushButton btn = panel.AddItem(btnData) as PushButton;
-        //        return btn;
-        //    }
-        //    catch(Exception)
-        //    {
-        //        return null;
-        //        throw;
-        //    }
-        //}
     }
 }
