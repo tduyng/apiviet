@@ -26,6 +26,7 @@ namespace APIViet.Ribbon
         private readonly string _className;
         protected ImageSource _largeImage;
         protected ImageSource _smallImage;
+        protected ImageSource _toolTipsImage;
         protected string _toolTips;
         protected string _description;
         private string _assemblyLocation;
@@ -89,7 +90,30 @@ namespace APIViet.Ribbon
             _smallImage = IconRibbon.GetEmbededImageFromSource(smallImageFullName);
             return this;
         }
-  
+
+        //Set ToolTipImage
+        public CustomPushButton SetToolTipsImage(ImageSource toolTipsImage)
+        {
+            _toolTipsImage = toolTipsImage;
+            return this;
+        }
+        public CustomPushButton SetToolTipsImage(Bitmap toolTipsImage)
+        {
+            _toolTipsImage = BitmapSourceConverter.ConvertFromBitmap(toolTipsImage);
+            return this;
+        }
+        public CustomPushButton SetToolTipsImage(Icon toolTipsImage)
+        {
+            _toolTipsImage = BitmapSourceConverter.ConvertFromIcon(toolTipsImage);
+            return this;
+        }
+        public CustomPushButton SetToolTipsImage(string toolTipsImageFullName)
+        {
+            _toolTipsImage = IconRibbon.GetEmbededImageFromSource(toolTipsImageFullName);
+            return this;
+        }
+
+
         public CustomPushButton SetToolTips(string toolTips)
         {
             _description = toolTips;
@@ -114,7 +138,7 @@ namespace APIViet.Ribbon
         }
 
         //PushButtonData
-        internal virtual ButtonData Finish()
+        internal virtual ButtonData GetButtonData()
         {
             PushButtonData pushButtonData =
                  new PushButtonData(_name,
@@ -122,7 +146,7 @@ namespace APIViet.Ribbon
                                     _assemblyLocation,
                                     _className);
 
-            if (_largeImage != null)
+            if (_largeImage  != null)
             {
                 pushButtonData.LargeImage = _largeImage;
             }
@@ -130,6 +154,10 @@ namespace APIViet.Ribbon
             if (_smallImage != null)
             {
                 pushButtonData.Image = _smallImage;
+            }
+            if (_toolTipsImage !=  null)
+            {
+                pushButtonData.ToolTipImage = _toolTipsImage;
             }
             if (!string.IsNullOrWhiteSpace(_toolTips))
             {
@@ -139,7 +167,7 @@ namespace APIViet.Ribbon
             {
                 pushButtonData.LongDescription = _description;
             }
-            if (_contextualHelp != null)
+            if (_contextualHelp !=  null)
             {
                 pushButtonData.SetContextualHelp(_contextualHelp);
             }

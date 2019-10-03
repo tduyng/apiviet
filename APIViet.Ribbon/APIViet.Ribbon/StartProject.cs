@@ -33,7 +33,7 @@ namespace APIViet.Ribbon
 
                 .CreateButton("btn1",
                     "Button1",
-                    typeof(Command),
+                    typeof(CmdCommand),
                     btn => btn
                         .SetLargeImage(Resources.arrow_carribean_blue_32x32)
                         .SetSmallImage(Resources.arrow_royal_blue_16x16)
@@ -45,7 +45,7 @@ namespace APIViet.Ribbon
 
                 .CreateButton("btn2",
                     "Button2",
-                    typeof(Command),
+                    typeof(CmdCommand),
                     btn => btn
                         .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                         .SetSmallImage(Resources.video_play_caribbean_blue_16x16)

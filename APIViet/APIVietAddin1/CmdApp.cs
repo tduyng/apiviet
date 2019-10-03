@@ -9,7 +9,7 @@ using Autodesk.Revit.UI;
 
 namespace APIVietAddin1
 {
-    class App : IExternalApplication
+    class CmdApp : IExternalApplication
     {
         public Result OnStartup(UIControlledApplication a)
         {

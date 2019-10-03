@@ -39,7 +39,7 @@ namespace APIViet.Ribbon
         /// <returns>Panel where stacked items were created</returns>
         public CustomPanel CreateStackedItems(Action<CustomStackedItem> action)
         {
-            if (action == null) throw new ArgumentNullException("action");
+            if (action is null) throw new ArgumentNullException("action");
 
             CustomStackedItem stackedItem = new CustomStackedItem(this);
 
@@ -51,12 +51,12 @@ namespace APIViet.Ribbon
                 throw new InvalidOperationException("You must create 2 or three items in the StackedItems");
             }
 
-            var item1 = stackedItem.Buttons[0].Finish();
-            var item2 = stackedItem.Buttons[1].Finish();
+            var item1 = stackedItem.Buttons[0].GetButtonData();
+            var item2 = stackedItem.Buttons[1].GetButtonData();
             if (stackedItem.ItemsCount == 3)
             {
                 var item3 =
-                    stackedItem.Buttons[2].Finish();
+                    stackedItem.Buttons[2].GetButtonData();
                 _panel.AddStackedItems(item1, item2, item3);
             }
             else
@@ -133,7 +133,7 @@ namespace APIViet.Ribbon
                 action.Invoke(button);
             }
 
-            var buttonData = button.Finish();
+            var buttonData = button.GetButtonData();
 
             _panel.AddItem(buttonData);
 
@@ -152,7 +152,7 @@ namespace APIViet.Ribbon
                 action.Invoke(button);
             }
 
-            var buttonData = button.Finish();
+            var buttonData = button.GetButtonData();
 
             var ribbonItem = _panel.AddItem(buttonData) as Autodesk.Revit.UI.PulldownButton;
 

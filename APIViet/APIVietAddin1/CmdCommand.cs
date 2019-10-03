@@ -12,7 +12,7 @@ using Autodesk.Revit.UI.Selection;
 namespace APIVietAddin1
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command : IExternalCommand
+    public class CmdCommand : IExternalCommand
     {
         public Result Execute(
           ExternalCommandData commandData,

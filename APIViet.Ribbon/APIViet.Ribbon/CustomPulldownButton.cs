@@ -17,20 +17,29 @@ namespace APIViet.Ribbon
             base(name, text, null)
         {
         }
-        internal override ButtonData Finish()
+        internal override ButtonData GetButtonData()
         {
             PulldownButtonData pulldownButtonData =
                 new PulldownButtonData(_name,
                     _text);
-            if (_largeImage != null)
+            if (_largeImage !=  null)
             {
                 pulldownButtonData.LargeImage = _largeImage;
             }
+
             if (_smallImage != null)
             {
                 pulldownButtonData.Image = _smallImage;
             }
-            if (_description != null)
+            if (_toolTipsImage != null)
+            {
+                pulldownButtonData.ToolTipImage = _toolTipsImage;
+            }
+            if (!string.IsNullOrWhiteSpace(_toolTips))
+            {
+                pulldownButtonData.ToolTip = _toolTips;
+            }
+            if (!string.IsNullOrWhiteSpace(_description))
             {
                 pulldownButtonData.LongDescription = _description;
             }
@@ -53,7 +62,7 @@ namespace APIViet.Ribbon
                               externalCommandType);
             if (action != null)
             {
-                action.Invoke(button); //is object, if we don't use Invoke, it means a method
+                action.Invoke(button); 
             }
             Buttons.Add(button);
 
@@ -101,7 +110,7 @@ namespace APIViet.Ribbon
         {
             foreach (var button in Buttons)
             {
-                pulldownButton.AddPushButton(button.Finish() as PushButtonData);
+                pulldownButton.AddPushButton(button.GetButtonData() as PushButtonData);
             }
         }
 

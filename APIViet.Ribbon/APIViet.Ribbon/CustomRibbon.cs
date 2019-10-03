@@ -33,7 +33,7 @@ namespace APIViet.Ribbon
         {
             _application = application;
             _ribbonControl = RevitRibbonControl.RibbonControl as adWin.RibbonControl;
-            if (_ribbonControl == null)
+            if (_ribbonControl is null)
                 throw new NotSupportedException("Could not initialize Revit ribbon control");
         }
 

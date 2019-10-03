@@ -49,7 +49,7 @@ namespace APIViet.Ribbon
 
 
             List<RibbonPanel> panels;
-            if (_systemTab == null)
+            if (_systemTab is null)
             {
                 panels = _ribbon.Application.GetRibbonPanels(_name);
             }
@@ -67,7 +67,7 @@ namespace APIViet.Ribbon
             }
 
             RibbonPanel ribbonPanel;
-            if (_systemTab == null)
+            if (_systemTab is null)
                 ribbonPanel = _ribbon.Application.CreateRibbonPanel(_name, panelTitle);
             else
                 ribbonPanel = _ribbon.Application.CreateRibbonPanel(_systemTab.Value, panelTitle);
