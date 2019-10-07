@@ -74,7 +74,6 @@ namespace APIViet.Ribbon
                         where TExternalCommandClass : class, IExternalCommand
         {
             var commandClassType = typeof(TExternalCommandClass);
-
             return CreateButton(name, text, commandClassType, null);
         }
 
@@ -84,7 +83,6 @@ namespace APIViet.Ribbon
             where TExternalCommandClass : class, IExternalCommand
         {
             var commandClassType = typeof(TExternalCommandClass);
-
             return CreateButton(name, text, commandClassType, action);
         }
 
