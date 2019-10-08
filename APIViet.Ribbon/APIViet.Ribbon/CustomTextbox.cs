@@ -7,59 +7,52 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using APIViet.Ribbon.Helpers;
+using System.Windows.Media;
+using System.Drawing;
 #endregion
 
 namespace APIViet.Ribbon
 {
-    public class CustomTextBox
+    public class CustomTextBox : CustomPushButton
     {
-        //public CustomTextBox() { }
 
-        ////PushButton
+        public CustomTextBox(string name): base (name,"",null)
+        {
+        }
 
-        //public static TextBox NewTextBox(RibbonPanel panel, string txtName, string smallImageName = "", string txtTooltip = "", string txtLongdescription = "", string promptText = "", bool isShowImageButton = true)
-        //{
-        //    try
-        //    {
-        //        TextBoxData txtData = new TextBoxData(txtName);
-        //        txtData.Image = IconRibbon.GetEmbededImageFromSource(smallImageName); //Using image 16x16
-        //        txtData.Name = txtName;
-        //        if (string.IsNullOrWhiteSpace(txtTooltip))
-        //        {
-        //            txtData.ToolTip = "Enter text here";
-        //        }
-        //        if (string.IsNullOrWhiteSpace(txtLongdescription))
-        //        {
-        //            txtData.LongDescription = "<p>This is APIViet.</p><p>CustomRibbon</p>";
-        //        }
 
-        //        txtData.ToolTipImage = IconRibbon.GetEmbededImageFromSource(smallImageName);
+        internal new TextBoxData GetButtonData()
+        {
+            TextBoxData txtData = new TextBoxData(_name);
+            if (string.IsNullOrWhiteSpace(_toolTips))
+            {
+                txtData.ToolTip = _toolTips;
+            }
+            if(string.IsNullOrWhiteSpace(_description))
+            {
+                txtData.LongDescription = _description;
+            }
+            if(_smallImage != null)
+            {
+                txtData.Image = _smallImage;
+            }
+            if(_toolTipsImage != null)
+            {
+                txtData.ToolTipImage = _toolTipsImage;
+            }
 
-        //        TextBox txtBox = panel.AddItem(txtData) as TextBox;
-        //        if (string.IsNullOrWhiteSpace(promptText))
-        //        {
-        //            txtBox.PromptText = "Enter a comment";
-        //        }
+            return txtData;
+        }
 
-        //        txtBox.ShowImageAsButton = isShowImageButton;
 
-        //        txtBox.EnterPressed += new EventHandler<Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs>(txtBox_EnterPressed);
-        //        txtBox.Width = 180;
+        // Events pressed for TextBox 
+        private static void txtBox_EnterPressed(object sender, Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs e)
+        {
+            // Cast sender to TextBox to retrieve text value
+            TextBox textBox = sender as TextBox;
+            TaskDialog.Show("TextBox Input", "This is what you typed in: " + textBox.Value.ToString());
+        }
 
-        //        return txtBox;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return null;
-        //        throw;
-        //    }
-        //}
-        //private static void txtBox_EnterPressed(object sender, Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs e)
-        //{
-        //    // Cast sender to TextBox to retrieve text value
-        //    TextBox textBox = sender as TextBox;
-        //    TaskDialog.Show("TextBox Input", "This is what you typed in: " + textBox.Value.ToString());
-        //}
 
     }
 }

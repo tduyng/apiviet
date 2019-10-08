@@ -78,7 +78,7 @@
     <Compile Include="CustomComboboxMember.cs" />
     <Compile Include="CustomPulldownButton.cs" />
     <Compile Include="CustomRibbonItem.cs" />
-    <Compile Include="CustomTextbox.cs" />
+    <Compile Include="CustomTextBox.cs" />
     <Compile Include="CustomToggleButton.cs" />
     <Compile Include="CustomSplitButton.cs" />
     <Compile Include="HelloWorld.cs" />

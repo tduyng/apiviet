@@ -90,7 +90,7 @@ namespace APIViet.Ribbon
                     btn => btn.SetLargeImage(Resources.x_mark_soylent_red_16x16));
             ribbon
                 .Tab("JOTools")
-                .Panel("VC2")
+                .Panel("VC3")
                 .CreateButton<HelloWorld>("btn1_2", "Button1",
                     btn => btn.SetLargeImage(Resources.x_mark_soylent_red_16x16));
 

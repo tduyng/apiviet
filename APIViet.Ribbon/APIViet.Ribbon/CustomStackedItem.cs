@@ -13,13 +13,13 @@ namespace APIViet.Ribbon
     public class CustomStackedItem : CustomRibbonItem
     {
         private readonly CustomPanel _panel;
-        private readonly IList<CustomPushButton> _buttons;
+        private readonly IList<CustomPushButton> _items;
 
 
         public CustomStackedItem (CustomPanel panel)
         {
             _panel = panel;
-            _buttons = new List<CustomPushButton>(3);
+            _items = new List<CustomPushButton>(3);
            
         }
 
@@ -54,7 +54,7 @@ namespace APIViet.Ribbon
                                    Type externalCommandType,
                                    Action<CustomPushButton> action)
         {
-            if (Buttons.Count == 3)
+            if (Items.Count == 3)
             {
                 throw new InvalidOperationException("You cannot create more than three items in the StackedItem");
             }
@@ -67,19 +67,36 @@ namespace APIViet.Ribbon
                 action.Invoke(button);
             }
 
-            Buttons.Add(button);
+            Items.Add(button);
 
+            return this;
+        }
+        public CustomStackedItem CreateTextBox(string name, Action<CustomTextBox> action)
+        {
+
+            if (Items.Count == 3)
+            {
+                throw new InvalidOperationException("You cannot create more than three items in the StackedItem");
+            }
+
+            var txt = new CustomTextBox(name);
+            if (action != null)
+            {
+                action.Invoke(txt);
+            }
+
+            Items.Add(txt);
             return this;
         }
 
         public int ItemsCount
         {
-            get { return Buttons.Count; }
+            get { return Items.Count; }
         }
 
-        public IList<CustomPushButton> Buttons
+        public IList<CustomPushButton> Items
         {
-            get { return _buttons; }
+            get { return _items; }
         }
 
     }

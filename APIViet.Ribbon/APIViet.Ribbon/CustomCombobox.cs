@@ -10,13 +10,13 @@ using Autodesk.Revit.UI;
 
 namespace APIViet.Ribbon
 {
-    //Split button
     public class CustomComboBox : CustomRibbonItem
     {
+ 
 
 
-        //public CustomComboBox() {}
-        //public static ComboBox NewComboBox(RibbonPanel panel, string cboDataName,string cboName, string cboTooltip = "", string cboLongDescription = "")
+        //public CustomComboBox() { }
+        //public static ComboBox NewComboBox(RibbonPanel panel, string cboDataName, string cboName, string cboTooltip = "", string cboLongDescription = "")
         //{
         //    try
         //    {
@@ -33,12 +33,12 @@ namespace APIViet.Ribbon
         //        comboBox.CurrentChanged += new EventHandler<Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs>(comboBox_CurrentChanged);
         //        return comboBox;
         //    }
-        //    catch(Exception)
+        //    catch (Exception)
         //    {
         //        return null;
         //        throw;
         //    }
-            
+
         //}
         //private static void comboBox_CurrentChanged(object sender, Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs e)
         //{
