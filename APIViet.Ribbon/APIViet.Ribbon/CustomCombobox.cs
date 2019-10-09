@@ -10,44 +10,53 @@ using Autodesk.Revit.UI;
 
 namespace APIViet.Ribbon
 {
-    public class CustomComboBox : CustomRibbonItem
+    public class CustomComboBox : CustomComboBoxMember
     {
- 
+        private readonly IList<CustomComboBoxMember> _cboMembers = new List<CustomComboBoxMember>();
+
+        public CustomComboBox(string name) : base(name, "", "")
+        {
+        }
+        internal new ComboBoxData GetButtonData()
+        {
+            ComboBoxData cboData = new ComboBoxData(_name);
+            if (_smallImage != null)
+            {
+                cboData.Image = _smallImage;
+            }
+            if (_toolTipsImage != null)
+            {
+                cboData.ToolTipImage = _toolTipsImage;
+            }
+            if (!string.IsNullOrWhiteSpace(_toolTips))
+            {
+                cboData.ToolTip = _toolTips;
+            }
+            if (!string.IsNullOrWhiteSpace(_description))
+            {
+                cboData.LongDescription = _description;
+            }
+            if (_contextualHelp != null)
+            {
+                cboData.SetContextualHelp(_contextualHelp);
+            }
+            return cboData;
+        }
+        public CustomComboBox CreateComboBoxMember(string name, string text, string groupName, Action)
+        {
+            var cboMember = new CustomComboBoxMember(name, text, groupName);
+
+            return this;
+        }
 
 
-        //public CustomComboBox() { }
-        //public static ComboBox NewComboBox(RibbonPanel panel, string cboDataName, string cboName, string cboTooltip = "", string cboLongDescription = "")
-        //{
-        //    try
-        //    {
-        //        ComboBoxData cboData = new ComboBoxData(cboDataName);
-        //        ComboBox comboBox = panel.AddItem(cboData) as ComboBox;
-        //        if (string.IsNullOrWhiteSpace(cboTooltip))
-        //        {
-        //            comboBox.ToolTip = "Select an option";
-        //        }
-        //        if (string.IsNullOrWhiteSpace(cboLongDescription))
-        //        {
-        //            comboBox.LongDescription = "Select a command you want to run";
-        //        }
-        //        comboBox.CurrentChanged += new EventHandler<Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs>(comboBox_CurrentChanged);
-        //        return comboBox;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return null;
-        //        throw;
-        //    }
-
-        //}
-        //private static void comboBox_CurrentChanged(object sender, Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs e)
-        //{
-        //    // Cast sender as TextBox to retrieve text value
-        //    ComboBox combodata = sender as ComboBox;
-        //    ComboBoxMember member = combodata.Current;
-        //    TaskDialog.Show("Combobox Selection", "Your new selection: " + member.ItemText);
-        //}
-
+        private static void comboBox_CurrentChanged(object sender, Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs e)
+        {
+            // Cast sender as TextBox to retrieve text value
+            ComboBox combodata = sender as ComboBox;
+            ComboBoxMember member = combodata.Current;
+            TaskDialog.Show("Combobox Selection", "Your new selection: " + member.ItemText);
+        }
 
     }
 }

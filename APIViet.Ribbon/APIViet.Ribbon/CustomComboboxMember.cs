@@ -13,29 +13,37 @@ namespace APIViet.Ribbon
 {
     public class CustomComboBoxMember: CustomPushButton
     {
-        public CustomComboBoxMember(string name, string text): base(name, text,null)
+        protected readonly string _groupName;
+        public CustomComboBoxMember(string name, string text, string groupName): base(name,text, null)
         {
-
+            _groupName = groupName;
         }
-        //public CustomComboBoxMember() { }
-        //public static ComboBoxMember NewComboBoxMember(RibbonPanel panel, ComboBox comboBox, string cboMemberDataName, string cboMemberDataText, string cboMemberDataGroupName, string normalImageComboBoxMemberDataName = "")
-        //{
-        //    try
-        //    {
-        //        ComboBoxMemberData cboMemberData = new ComboBoxMemberData(cboMemberDataName, cboMemberDataText);
-        //        cboMemberData.GroupName = cboMemberDataGroupName;
-        //        cboMemberData.Image = IconRibbon.GetEmbededImageFromSource(normalImageComboBoxMemberDataName); //Using image 16x16
-
-        //        ComboBoxMember cboMember = comboBox.AddItem(cboMemberData);
-        //        return cboMember;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return null;
-        //        throw;
-        //    }
-
-        //}
+        internal new ComboBoxMemberData GetButtonData()
+        {
+            ComboBoxMemberData cboMemberData = new ComboBoxMemberData(_name, _text);
+            cboMemberData.GroupName = _groupName;
+            if (_smallImage != null)
+            {
+                cboMemberData.Image = _smallImage;
+            }
+            if (_toolTipsImage != null)
+            {
+                cboMemberData.ToolTipImage = _toolTipsImage;
+            }
+            if (!string.IsNullOrWhiteSpace(_toolTips))
+            {
+                cboMemberData.ToolTip = _toolTips;
+            }
+            if (!string.IsNullOrWhiteSpace(_description))
+            {
+                cboMemberData.LongDescription = _description;
+            }
+            if (_contextualHelp != null)
+            {
+                cboMemberData.SetContextualHelp(_contextualHelp);
+            }
+            return cboMemberData;
+        }
 
     }
 }
