@@ -10,7 +10,7 @@ Learn and do some addin revit with C#
 - [Installation](#installation)
 - [...](#...)
 - [Roadmap](#roadmap)
-- [License](## License)
+- [License](#license)
 
 
 <a name="ribbon"></a>
