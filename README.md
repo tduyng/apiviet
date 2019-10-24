@@ -1,10 +1,12 @@
 # **Apiviet**
-
+<p align="left">
+  <img src="https://img.shields.io/badge/apiviet-TienDuy-green" />
+</p>
 Learn and do some addin revit with C#
 
 ---
 
-## Table of Contents
+## 📄 Table of Contents
 - [Ribbon](#ribbon)
 - [Addin](#addin)
 - [Installation](#installation)
@@ -14,7 +16,7 @@ Learn and do some addin revit with C#
 
 
 <a name="ribbon"></a>
-## Ribbon
+## :octocat: Ribbon
 - **Ribbon and Panel:** Create a custom ribbon panel, create or move buttons to a existed custom panel
 - **Button:** Learn and use the solution delegate (action) for create properties of button in panel 
 - **Combobox:**
@@ -26,14 +28,14 @@ Learn and do some addin revit with C#
 
 
 <a name="addin"></a>
-## Addin
+## :octocat: Addin
 .....
 
 
 
 
 <a name="roadmap"></a>
-## :crystal_ball: Roadmap
+## :octocat: Roadmap
 
 - [x] Ribbon Revit!
   - [x] Create all types of ribbon revit
@@ -48,14 +50,14 @@ Learn and do some addin revit with C#
 
 
 <a name="license"></a>
-# :scroll: License
+# 📃 License
 
 MIT © [Tien-Duy NGUYEN](https://github.com/TienDuyNGUYEN)
 
 
 ```So let's go!``` 
 
-**Good luck for me. ;)**
+**Good luck for me. 😄**
 
 :baby_chick:
 ---
