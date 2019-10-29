@@ -1,12 +1,14 @@
 #region Namespaces
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using adWin = Autodesk.Windows;
+using Autodesk.Windows;
 using UIFramework;
 #endregion
 
@@ -18,7 +20,6 @@ namespace APIViet.Ribbon
         private readonly Autodesk.Revit.UI.Tab? _systemTab;
         private readonly string _name;
         //private readonly RibbonTab _tab;
-
         public CustomTab(CustomRibbon ribbon, string name)
         {
             _ribbon = ribbon;
@@ -30,51 +31,20 @@ namespace APIViet.Ribbon
             _ribbon = ribbon;
             _systemTab = systemTab;
         }
-
-        internal CustomRibbon Ribbon
-        {
-            get { return _ribbon; }
-        }
-
-        //public string Title { get { return _tab.Title; }}
-
+        internal CustomRibbon Ribbon => _ribbon;
         public CustomPanel Panel(string panelTitle)
         {
-            //foreach (var panel in _tab.Panels)
-            //{
-            //    if (panel.Source.Title.Equals(panelTitle))
-            //    {
-
-            //        return new Panel(this, panel);
-            //    }
-            //}
-
-
-            List<RibbonPanel> panels;
-            if (_systemTab is null)
+            List<Autodesk.Revit.UI.RibbonPanel>  panels = _systemTab is null ? _ribbon.Application.GetRibbonPanels(_name) 
+                : _ribbon.Application.GetRibbonPanels(_systemTab.Value);
+            foreach (var panel in panels.Where(panel => panel.Name.Equals(panelTitle)))
             {
-                panels = _ribbon.Application.GetRibbonPanels(_name);
-            }
-            else
-            {
-                panels = _ribbon.Application.GetRibbonPanels(_systemTab.Value);
-            }
-            foreach (var panel in panels)
-            {
-                if (panel.Name.Equals(panelTitle))
-                {
-                    panel.AddSeparator();
-                    return new CustomPanel(this, panel);
-                }
+                panel.AddSeparator();
+                return new CustomPanel(this, panel);
             }
 
-            RibbonPanel ribbonPanel;
-            if (_systemTab is null)
-                ribbonPanel = _ribbon.Application.CreateRibbonPanel(_name, panelTitle);
-            else
-                ribbonPanel = _ribbon.Application.CreateRibbonPanel(_systemTab.Value, panelTitle);
+            Autodesk.Revit.UI.RibbonPanel ribbonPanel = _systemTab is null ? _ribbon.Application.CreateRibbonPanel(_name, panelTitle) 
+                                                : _ribbon.Application.CreateRibbonPanel(_systemTab.Value, panelTitle);
             return new CustomPanel(this, ribbonPanel);
-
         }
     }
 }

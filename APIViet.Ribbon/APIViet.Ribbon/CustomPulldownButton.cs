@@ -60,10 +60,7 @@ namespace APIViet.Ribbon
             var button = new CustomPushButton(name,
                               text,
                               externalCommandType);
-            if (action != null)
-            {
-                action.Invoke(button); 
-            }
+            action?.Invoke(button);
             Buttons.Add(button);
 
             return this;
@@ -94,15 +91,9 @@ namespace APIViet.Ribbon
         }
 
 
-        public int ItemsCount
-        {
-            get { return Buttons.Count; }
-        }
+        public int ItemsCount => Buttons.Count;
 
-        public IList<CustomPushButton> Buttons
-        {
-            get { return _buttons; }
-        }
+        public IList<CustomPushButton> Buttons => _buttons;
 
         internal void BuildButtons(Autodesk.Revit.UI.PulldownButton pulldownButton)
         {

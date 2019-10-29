@@ -62,10 +62,7 @@ namespace APIViet.Ribbon
             var button = new CustomPushButton(name,
                               text,
                               externalCommandType);
-            if (action != null)
-            {
-                action.Invoke(button);
-            }
+            action?.Invoke(button);
 
             Items.Add(button);
 
@@ -80,24 +77,14 @@ namespace APIViet.Ribbon
             }
 
             var txt = new CustomTextBox(name);
-            if (action != null)
-            {
-                action.Invoke(txt);
-            }
+            action?.Invoke(txt);
 
             Items.Add(txt);
             return this;
         }
 
-        public int ItemsCount
-        {
-            get { return Items.Count; }
-        }
+        public int ItemsCount => Items.Count;
 
-        public IList<CustomPushButton> Items
-        {
-            get { return _items; }
-        }
-
+        public IList<CustomPushButton> Items => _items;
     }
 }

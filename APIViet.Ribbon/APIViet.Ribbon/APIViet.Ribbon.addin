@@ -1,18 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
-  <AddIn Type="Command">
-    <Text>Command APIViet</Text>
-    <Description>CreateRibbon for APIViet</Description>
-    <Assembly>APIViet.Ribbon.dll</Assembly>
-    <FullClassName>APIViet.Ribbon.FirstProgram</FullClassName>
-    <ClientId>f947576c-565a-4b34-a18b-9b0ee33064ff</ClientId>
-    <VendorId>Tien Duy NGUYEN</VendorId>
-    <VendorDescription>tienduy.nguyen@outlook.com</VendorDescription>
-  </AddIn>
   <AddIn Type="Application">
     <Name>Add-In APIViet</Name>
     <Assembly>APIViet.Ribbon.dll</Assembly>
-    <FullClassName>APIViet.Ribbon.StartProject</FullClassName>
+    <FullClassName>APIViet.Ribbon.AppStartProject</FullClassName>
     <ClientId>1faeb7bf-5935-48a2-bc67-994e400fb9fd</ClientId>
     <VendorId>Tien Duy NGUYEN</VendorId>
     <VendorDescription>tienduy.nguyen@outlook.com</VendorDescription>

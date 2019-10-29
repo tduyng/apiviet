@@ -33,3 +33,30 @@ E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\zh-TW\AdWindows.r
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.CopyComplete
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.Properties.Resources.resources
 E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.GenerateResource.cache
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.Properties.Resources.resources
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.GenerateResource.cache
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.CoreCompileInputs.cache
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\AdWindows.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\UIFramework.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\cs-CZ\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\de-DE\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\en-GB\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\en-US\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\es-ES\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\fr-FR\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\it-IT\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\ja-JP\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\ko-KR\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\pl-PL\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\pt-BR\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\ru-RU\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\zh-CN\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\zh-TW\AdWindows.resources.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csproj.CopyComplete
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\APIViet.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\APIViet.pdb
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.csprojAssemblyReference.cache
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\APIViet.Ribbon.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\bin\Debug\APIViet.Ribbon.pdb
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.dll
+E:\01-GITHUB\APIViet\APIViet.Ribbon\APIViet.Ribbon\obj\Debug\APIViet.Ribbon.pdb

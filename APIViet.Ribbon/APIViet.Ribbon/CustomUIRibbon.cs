@@ -17,7 +17,7 @@
 //namespace APIViet.Ribbon
 //{
 //    /// <summary>
-//    /// Create a ribbon tab
+//    /// Create a ribbon tab with the traditional solution
 //    /// </summary>
 //    public class CustomUIRibbon
 //    {

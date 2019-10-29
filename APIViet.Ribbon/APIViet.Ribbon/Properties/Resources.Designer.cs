@@ -22,7 +22,7 @@ namespace APIViet.Ribbon.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace APIViet.Ribbon.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("APIViet.Ribbon.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace APIViet.Ribbon.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_carribean_blue_32x32 {
+        public static System.Drawing.Bitmap arrow_carribean_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("arrow_carribean_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,27 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_royal_blue_16x16 {
+        public static System.Drawing.Bitmap arrow_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap arrow_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap arrow_royal_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("arrow_royal_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +103,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_royal_blue_32x32 {
+        public static System.Drawing.Bitmap arrow_royal_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("arrow_royal_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +113,37 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_caribbean_blue_16x16 {
+        public static System.Drawing.Bitmap check_mark_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("check_mark_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap check_mark_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("check_mark_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap circle_babie_pink_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("circle_babie_pink_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap circle_caribbean_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("circle_caribbean_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +153,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_caribbean_blue_32x32 {
+        public static System.Drawing.Bitmap circle_caribbean_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("circle_caribbean_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +163,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_guacamole_green_16x16 {
+        public static System.Drawing.Bitmap circle_guacamole_green_16x16 {
             get {
                 object obj = ResourceManager.GetObject("circle_guacamole_green_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +173,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_guacamole_green_32x32 {
+        public static System.Drawing.Bitmap circle_guacamole_green_32x32 {
             get {
                 object obj = ResourceManager.GetObject("circle_guacamole_green_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +183,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_orange_16x16 {
+        public static System.Drawing.Bitmap circle_orange_16x16 {
             get {
                 object obj = ResourceManager.GetObject("circle_orange_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +193,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_orange_32x32 {
+        public static System.Drawing.Bitmap circle_orange_32x32 {
             get {
                 object obj = ResourceManager.GetObject("circle_orange_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +203,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_royal_blue_16x16 {
+        public static System.Drawing.Bitmap circle_royal_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("circle_royal_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +213,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_royal_blue_32x32 {
+        public static System.Drawing.Bitmap circle_royal_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("circle_royal_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +223,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_soylent_red_16x16 {
+        public static System.Drawing.Bitmap circle_soylent_red_16x16 {
             get {
                 object obj = ResourceManager.GetObject("circle_soylent_red_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +233,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap circle_soylent_red_32x32 {
+        public static System.Drawing.Bitmap circle_soylent_red_32x32 {
             get {
                 object obj = ResourceManager.GetObject("circle_soylent_red_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +243,27 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emoticon_orange_16x16 {
+        public static System.Drawing.Bitmap emoticon_30_royal_blue_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("emoticon_30_royal_blue_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap emoticon_30_royal_blue_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("emoticon_30_royal_blue_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap emoticon_orange_16x16 {
             get {
                 object obj = ResourceManager.GetObject("emoticon_orange_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +273,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emoticon_orange_32x32 {
+        public static System.Drawing.Bitmap emoticon_orange_32x32 {
             get {
                 object obj = ResourceManager.GetObject("emoticon_orange_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +283,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info_caribbeab_blue_32x32 {
+        public static System.Drawing.Bitmap info_caribbeab_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("info_caribbeab_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +293,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info_caribbean_blue_16x16 {
+        public static System.Drawing.Bitmap info_caribbean_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("info_caribbean_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +303,167 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search_royal_blue_16x16 {
+        public static System.Drawing.Bitmap info_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("info_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap info_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("info_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap minus_5_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("minus_5_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap minus_5_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("minus_5_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ok_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("ok_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ok_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ok_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap plus_4_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("plus_4_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap plus_4_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("plus_4_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Revit {
+            get {
+                object obj = ResourceManager.GetObject("Revit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Revit_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Revit_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_caribbean_blue_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("search_caribbean_blue_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_caribbean_blue_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("search_caribbean_blue_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("search_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("search_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_orange_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("search_orange_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_orange_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("search_orange_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap search_royal_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("search_royal_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +473,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search_royal_blue_32x32 {
+        public static System.Drawing.Bitmap search_royal_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("search_royal_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +483,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_caribbean_blue_32x32 {
+        public static System.Drawing.Bitmap square_caribbean_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("square_caribbean_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +493,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_caribean_blue_16x16 {
+        public static System.Drawing.Bitmap square_caribean_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("square_caribean_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +503,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_guacamole_green_16x16 {
+        public static System.Drawing.Bitmap square_guacamole_green_16x16 {
             get {
                 object obj = ResourceManager.GetObject("square_guacamole_green_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +513,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_guacamole_green_32x32 {
+        public static System.Drawing.Bitmap square_guacamole_green_32x32 {
             get {
                 object obj = ResourceManager.GetObject("square_guacamole_green_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -293,7 +523,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_orage_16x16 {
+        public static System.Drawing.Bitmap square_orage_16x16 {
             get {
                 object obj = ResourceManager.GetObject("square_orage_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -303,7 +533,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_orange_32x32 {
+        public static System.Drawing.Bitmap square_orange_32x32 {
             get {
                 object obj = ResourceManager.GetObject("square_orange_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +543,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_royal_blue_16x16 {
+        public static System.Drawing.Bitmap square_royal_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("square_royal_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +553,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_royal_blue_32x32 {
+        public static System.Drawing.Bitmap square_royal_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("square_royal_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -333,7 +563,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_soylent_red_16x16 {
+        public static System.Drawing.Bitmap square_soylent_red_16x16 {
             get {
                 object obj = ResourceManager.GetObject("square_soylent_red_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -343,7 +573,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap square_soylent_red_32x32 {
+        public static System.Drawing.Bitmap square_soylent_red_32x32 {
             get {
                 object obj = ResourceManager.GetObject("square_soylent_red_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -353,7 +583,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap video_play_caribbean_blue_16x16 {
+        public static System.Drawing.Bitmap video_play_caribbean_blue_16x16 {
             get {
                 object obj = ResourceManager.GetObject("video_play_caribbean_blue_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -363,7 +593,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap video_play_caribbean_blue_32x32 {
+        public static System.Drawing.Bitmap video_play_caribbean_blue_32x32 {
             get {
                 object obj = ResourceManager.GetObject("video_play_caribbean_blue_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -373,7 +603,87 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap x_mark_soylent_red_16x16 {
+        public static System.Drawing.Bitmap video_play_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap video_play_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap video_play_royal_blue_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_royal_blue_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap video_play_royal_blue_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_royal_blue_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap video_play_soylent_red_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_soylent_red_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap video_play_soylent_red_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("video_play_soylent_red_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap x_mark_default_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("x_mark_default_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap x_mark_default_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("x_mark_default_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap x_mark_soylent_red_16x16 {
             get {
                 object obj = ResourceManager.GetObject("x_mark_soylent_red_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -383,7 +693,7 @@ namespace APIViet.Ribbon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap x_mark_soylent_red_32x32 {
+        public static System.Drawing.Bitmap x_mark_soylent_red_32x32 {
             get {
                 object obj = ResourceManager.GetObject("x_mark_soylent_red_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

@@ -20,8 +20,7 @@ namespace APIViet.Ribbon
         }
         internal new ComboBoxMemberData GetButtonData()
         {
-            ComboBoxMemberData cboMemberData = new ComboBoxMemberData(_name, _text);
-            cboMemberData.GroupName = _groupName;
+            ComboBoxMemberData cboMemberData = new ComboBoxMemberData(_name, _text) {GroupName = _groupName};
             if (_smallImage != null)
             {
                 cboMemberData.Image = _smallImage;

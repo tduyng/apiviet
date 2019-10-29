@@ -39,11 +39,9 @@ namespace APIViet.Ribbon
             _name = name;
             _text = text;
 
-            if (externalCommandType != null)
-            {
-                _className = externalCommandType.FullName;
-                _assemblyLocation = externalCommandType.Assembly.Location;
-            }
+            if (externalCommandType == null) return;
+            _className = externalCommandType.FullName;
+            _assemblyLocation = externalCommandType.Assembly.Location;
         }
 
 

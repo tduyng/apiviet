@@ -1,12 +1,6 @@
 
 /* 
  * Learn solution of Victor Chekalin
- * 
- * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
- * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
- * PARTICULAR PURPOSE.
- * 
  */
 
 #region Namespaces
@@ -17,7 +11,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using adWin = Autodesk.Windows;
+using Autodesk.Windows;
 using UIFramework;
 #endregion
 
@@ -26,13 +20,13 @@ namespace APIViet.Ribbon
     public class CustomRibbon
     {
         private readonly UIControlledApplication _application;
-        private readonly adWin.RibbonControl _ribbonControl;
+        private readonly Autodesk.Windows.RibbonControl _ribbonControl;
         //public bool IsVisible;
 
         public CustomRibbon(UIControlledApplication application)
         {
             _application = application;
-            _ribbonControl = RevitRibbonControl.RibbonControl as adWin.RibbonControl;
+            _ribbonControl = RevitRibbonControl.RibbonControl as Autodesk.Windows.RibbonControl;
             if (_ribbonControl is null)
                 throw new NotSupportedException("Could not initialize Revit ribbon control");
         }
@@ -42,10 +36,7 @@ namespace APIViet.Ribbon
             return new CustomRibbon(application);
         }
 
-        internal UIControlledApplication Application
-        {
-            get { return _application; }
-        }
+        internal UIControlledApplication Application => _application;
 
         public CustomTab Tab(string tabTitle)
         {
@@ -57,16 +48,6 @@ namespace APIViet.Ribbon
                 }
             }
 
-            //RibbonTab ribbonTab =
-            //    new RibbonTab()
-            //        {
-            //            Title = tabTitle,
-            //            IsVisible = true,
-            //            Name = tabTitle,
-
-            //        };
-            //_ribbonControl.Tabs.Add(ribbonTab);
-
             _application.CreateRibbonTab(tabTitle);
             return new CustomTab(this, tabTitle);
         }
@@ -76,10 +57,5 @@ namespace APIViet.Ribbon
         {
             return new CustomTab(this, systemTab);
         }
-        //public void SetVisibleTab(CustomTab tab,bool isVisible)
-        //{
-        //    IsVisible = isVisible;
-        //    return this;
-        //}
     }
 }

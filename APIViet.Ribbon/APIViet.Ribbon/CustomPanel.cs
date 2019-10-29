@@ -6,6 +6,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using Autodesk.Windows;
 #endregion
 
 namespace APIViet.Ribbon
@@ -13,24 +14,16 @@ namespace APIViet.Ribbon
     public class CustomPanel : CustomRibbonItem
     {
         private readonly CustomTab _tab;
-        private readonly RibbonPanel _panel;
+        private readonly Autodesk.Revit.UI.RibbonPanel _panel;
 
-        public CustomPanel(CustomTab tab, RibbonPanel panel)
+        public CustomPanel(CustomTab tab, Autodesk.Revit.UI.RibbonPanel panel)
         {
             _tab = tab;
             _panel = panel;
         }
 
-
-        internal RibbonPanel Source
-        {
-            get { return _panel; }
-        }
-
-        internal CustomTab Tab
-        {
-            get { return _tab; }
-        }
+        internal Autodesk.Revit.UI.RibbonPanel Source => _panel;
+        internal CustomTab Tab => _tab;
 
         /// <summary>
         /// Create new Stacked items at the panel
@@ -39,9 +32,9 @@ namespace APIViet.Ribbon
         /// <returns>Panel where stacked items were created</returns>
         public CustomPanel CreateStackedItems(Action<CustomStackedItem> action)
         {
-            if (action is null) throw new ArgumentNullException("action");
+            if (action is null) throw new ArgumentNullException(nameof(action));
 
-            CustomStackedItem stackedItem = new CustomStackedItem(this);
+            var stackedItem = new CustomStackedItem(this);
 
             action.Invoke(stackedItem);
 
@@ -128,10 +121,7 @@ namespace APIViet.Ribbon
             var button = new CustomPushButton(name,
                 text,
                 externalCommandType);
-            if (action != null)
-            {
-                action.Invoke(button);
-            }
+            action?.Invoke(button);
             var buttonData = button.GetButtonData();
             _panel.AddItem(buttonData);
             return this;
@@ -144,10 +134,7 @@ namespace APIViet.Ribbon
             var pulldownButton = new CustomPulldownButton(name,
                 text);
 
-            if (action != null)
-            {
-                action.Invoke(pulldownButton);
-            }
+            action?.Invoke(pulldownButton);
 
             var pulldownButtonData = pulldownButton.GetButtonData();
             var ribbonItem = _panel.AddItem(pulldownButtonData) as Autodesk.Revit.UI.PulldownButton;
@@ -159,10 +146,7 @@ namespace APIViet.Ribbon
         public CustomPanel CreateSplitButton(string name, string text,Action<CustomSplitButton> action)
         {
             var splitButton = new CustomSplitButton(name, text);
-            if (action!= null)
-            {
-                action.Invoke(splitButton);
-            }
+            action?.Invoke(splitButton);
             var splitButtonData = splitButton.GetButtonData();
             var ribbonItem = _panel.AddItem(splitButtonData) as SplitButton;
             splitButton.BuildButtons(ribbonItem);
@@ -172,10 +156,7 @@ namespace APIViet.Ribbon
         public CustomPanel CreateTextBox(string name, Action<CustomTextBox> action) 
         {
             var txt = new CustomTextBox(name);
-            if(action != null)
-            {
-                action.Invoke(txt);
-            }
+            action?.Invoke(txt);
             var txtData = txt.GetButtonData();
              _panel.AddItem(txtData);
             return this;

@@ -50,10 +50,7 @@ namespace APIViet.Ribbon
         public CustomSplitButton CreateButton(string name, string text, Type externalCommandType, Action<CustomPushButton> action)
         {
             var button = new CustomPushButton(name, text, externalCommandType);
-            if(action != null)
-            {
-                action.Invoke(button);
-            }
+            action?.Invoke(button);
             Buttons.Add(button);
             return this;
         }
@@ -75,14 +72,10 @@ namespace APIViet.Ribbon
             return CreateButton(name, text, commandClassType, action);
         }
 
-        public int ItemsCount
-        {
-            get { return Buttons.Count;}
-        }
-        public IList<CustomPushButton> Buttons
-        {
-            get { return _buttons;}
-        }
+        public int ItemsCount => Buttons.Count;
+
+        public IList<CustomPushButton> Buttons => _buttons;
+
         internal void BuildButtons(Autodesk.Revit.UI.SplitButton splitbutton)
         {
             foreach (var button in Buttons)

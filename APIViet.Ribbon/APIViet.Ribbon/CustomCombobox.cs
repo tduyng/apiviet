@@ -42,13 +42,19 @@ namespace APIViet.Ribbon
             }
             return cboData;
         }
-        public CustomComboBox CreateComboBoxMember(string name, string text, string groupName, Action)
+        public CustomComboBox CreateComboBoxMember(string name, string text, string groupName, Action<CustomComboBoxMember> action)
         {
             var cboMember = new CustomComboBoxMember(name, text, groupName);
-
+            action?.Invoke(cboMember);
             return this;
         }
+        public CustomComboBox CreateComboBoxMember(string name,string text, string groupName)
+        {
+            return CreateComboBoxMember(name, text,groupName,null);
+        }
+        public IList<CustomComboBoxMember> CboMembers => _cboMembers;
 
+        public int ItemsCount => CboMembers.Count;
 
         private static void comboBox_CurrentChanged(object sender, Autodesk.Revit.UI.Events.ComboBoxCurrentChangedEventArgs e)
         {
