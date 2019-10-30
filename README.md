@@ -2,7 +2,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/apiviet-TienDuy-green" />
 </p>
-Learn and do some addin revit with C#
+Learn and do some addin revit with C# (Revit 2019)
 
 ---
 
