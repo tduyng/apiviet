@@ -25,40 +25,6 @@ namespace ApiViet.Ribbon
         internal Autodesk.Revit.UI.RibbonPanel Source => _panel;
         internal CustomTab Tab => _tab;
 
-        /// <summary>
-        /// Create new Stacked items at the panel
-        /// </summary>
-        /// <param name="action">Action where you must add items to the stacked panel</param>
-        /// <returns>Panel where stacked items were created</returns>
-        public CustomPanel CreateStackedItems(Action<CustomStackedItem> action)
-        {
-            if (action is null) throw new ArgumentNullException(nameof(action));
-
-            var stackedItem = new CustomStackedItem(this);
-
-            action.Invoke(stackedItem);
-
-            if (stackedItem.ItemsCount < 2 ||
-                stackedItem.ItemsCount > 3)
-            {
-                throw new InvalidOperationException("You must create 2 or three items in the StackedItems");
-            }
-
-            var item1 = stackedItem.Items[0].GetButtonData();
-            var item2 = stackedItem.Items[1].GetButtonData();
-            if (stackedItem.ItemsCount == 3)
-            {
-                var item3 =
-                    stackedItem.Items[2].GetButtonData();
-                _panel.AddStackedItems(item1, item2, item3);
-            }
-            else
-            {
-                _panel.AddStackedItems(item1, item2);
-            }
-
-            return this;
-        }
 
         /// <summary>
         /// Create push button on the panel
@@ -123,7 +89,46 @@ namespace ApiViet.Ribbon
                 externalCommandType);
             action?.Invoke(button);
             var buttonData = button.GetButtonData();
-            _panel.AddItem(buttonData);
+            try { _panel.AddItem(buttonData); }
+            catch { }
+            return this;
+        }
+
+        /// <summary>
+        /// Create new Stacked items at the panel
+        /// </summary>
+        /// <param name="action">Action where you must add items to the stacked panel</param>
+        /// <returns>Panel where stacked items were created</returns>
+        public CustomPanel CreateStackedItems(Action<CustomStackedItem> action)
+        {
+
+            if (action is null) throw new ArgumentNullException(nameof(action));
+
+            var stackedItem = new CustomStackedItem(this);
+
+            action.Invoke(stackedItem);
+
+            if (stackedItem.ItemsCount < 2 ||
+                stackedItem.ItemsCount > 3)
+            {
+                throw new InvalidOperationException("You must create 2 or three items in the StackedItems");
+            }
+
+            var item1 = stackedItem.Items[0].GetButtonData();
+            var item2 = stackedItem.Items[1].GetButtonData();
+            if (stackedItem.ItemsCount == 3)
+            {
+                var item3 =
+                    stackedItem.Items[2].GetButtonData();
+                try { _panel.AddStackedItems(item1, item2, item3); }
+                catch { }
+            }
+            else
+            {
+                try { _panel.AddStackedItems(item1, item2); }
+                catch { }
+            }
+
             return this;
         }
 
@@ -131,11 +136,33 @@ namespace ApiViet.Ribbon
                                   string text,
                                   Action<CustomPulldownButton> action)
         {
+            if (action is null) throw new ArgumentNullException(nameof(action));
             var pulldownButton = new CustomPulldownButton(name,
-                text);
+                text, this);
+            var pulldownButtonData = pulldownButton.GetButtonData();
+
+            var ribbonItem = _panel.AddItem(pulldownButtonData) as PulldownButton;
+
 
             action?.Invoke(pulldownButton);
+            for (int i = 0; i < pulldownButton.ItemsCount; i++)
+            {
+                try{_panel.AddItem( pulldownButton.Items[i].GetButtonData());}
+                catch { }
+            }
+            pulldownButton.BuildButtons(ribbonItem);
+            pulldownButton.RibbonItem = ribbonItem;
 
+            return this;
+        }
+        public CustomPanel CreatePullDownButton(string name, string text)
+        {
+            var pulldownButton = new CustomPulldownButton(name, text, this);
+            for (int i = 0; i < pulldownButton.ItemsCount; i++)
+            {
+                try { _panel.AddItem(pulldownButton.Items[0].GetButtonData()); }
+                catch { }
+            }
             var pulldownButtonData = pulldownButton.GetButtonData();
             var ribbonItem = _panel.AddItem(pulldownButtonData) as Autodesk.Revit.UI.PulldownButton;
             pulldownButton.BuildButtons(ribbonItem);
@@ -145,7 +172,7 @@ namespace ApiViet.Ribbon
         }
         public CustomPanel CreateSplitButton(string name, string text,Action<CustomSplitButton> action)
         {
-            var splitButton = new CustomSplitButton(name, text);
+            var splitButton = new CustomSplitButton(name, text, this);
             action?.Invoke(splitButton);
             var splitButtonData = splitButton.GetButtonData();
             var ribbonItem = _panel.AddItem(splitButtonData) as SplitButton;
@@ -162,12 +189,6 @@ namespace ApiViet.Ribbon
             return this;
         }
 
-        //--
-
-        /// <summary>
-        /// Create separator on the panel
-        /// </summary>
-        /// <returns></returns>
         public CustomPanel CreateSeparator()
         {
             _panel.AddSeparator();

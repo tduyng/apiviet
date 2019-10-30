@@ -11,9 +11,14 @@ namespace ApiViet.Ribbon
 {
     public class CustomSplitButton : CustomPushButton
     {
-        private readonly IList<CustomPushButton> _buttons = new List<CustomPushButton>();
-        public CustomSplitButton(string name, string text) : base(name, text, null)
+        private readonly CustomPanel _panel;
+        private readonly IList<CustomPushButton> _items;
+
+        public CustomSplitButton(string name, string text, CustomPanel panel) :
+            base(name, text, null)
         {
+            _panel = panel;
+            _items = new List<CustomPushButton>();
         }
         internal override ButtonData GetButtonData()
         {
@@ -51,7 +56,7 @@ namespace ApiViet.Ribbon
         {
             var button = new CustomPushButton(name, text, externalCommandType);
             action?.Invoke(button);
-            Buttons.Add(button);
+            Items.Add(button);
             return this;
         }
         public CustomSplitButton CreateButton(string name, string text, Type externalCommadType)
@@ -72,13 +77,13 @@ namespace ApiViet.Ribbon
             return CreateButton(name, text, commandClassType, action);
         }
 
-        public int ItemsCount => Buttons.Count;
+        public int ItemsCount => Items.Count;
 
-        public IList<CustomPushButton> Buttons => _buttons;
+        public IList<CustomPushButton> Items => _items;
 
         internal void BuildButtons(Autodesk.Revit.UI.SplitButton splitbutton)
         {
-            foreach (var button in Buttons)
+            foreach (var button in Items)
             {
                 splitbutton.AddPushButton(button.GetButtonData() as PushButtonData);
             }

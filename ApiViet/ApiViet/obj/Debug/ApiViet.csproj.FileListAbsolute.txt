@@ -23,3 +23,28 @@ E:\00-BIM\05 - REVIT API\01-  ADDIN REVIT\Addin dev\apiviet\ApiViet\ApiViet\bin\
 E:\00-BIM\05 - REVIT API\01-  ADDIN REVIT\Addin dev\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CopyComplete
 E:\00-BIM\05 - REVIT API\01-  ADDIN REVIT\Addin dev\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.dll
 E:\00-BIM\05 - REVIT API\01-  ADDIN REVIT\Addin dev\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.pdb
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ApiViet.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ApiViet.pdb
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\AdWindows.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\UIFramework.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\cs-CZ\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\de-DE\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\en-GB\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\en-US\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\es-ES\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\fr-FR\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\it-IT\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ja-JP\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ko-KR\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\pl-PL\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\pt-BR\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ru-RU\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\zh-CN\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\zh-TW\AdWindows.resources.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csprojAssemblyReference.cache
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.Properties.Resources.resources
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.GenerateResource.cache
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CoreCompileInputs.cache
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CopyComplete
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.dll
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.pdb

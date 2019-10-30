@@ -11,11 +11,15 @@ namespace ApiViet.Ribbon
 {
     public class CustomPulldownButton : CustomPushButton
     {
-        private readonly IList<CustomPushButton> _buttons = new List<CustomPushButton>();
+        //private readonly IList<CustomPushButton> _buttons = new List<CustomPushButton>();
+        private readonly CustomPanel _panel;
+        private readonly IList<CustomPushButton> _items;
 
-        public CustomPulldownButton(string name, string text) :
+        public CustomPulldownButton(string name, string text, CustomPanel panel) :
             base(name, text, null)
         {
+            _panel = panel;
+            _items = new List<CustomPushButton>();
         }
         internal override ButtonData GetButtonData()
         {
@@ -61,8 +65,7 @@ namespace ApiViet.Ribbon
                               text,
                               externalCommandType);
             action?.Invoke(button);
-            Buttons.Add(button);
-
+            Items.Add(button);
             return this;
         }
 
@@ -89,19 +92,15 @@ namespace ApiViet.Ribbon
         {
             return CreateButton(name, text, externalCommandType, null);
         }
-
-
-        public int ItemsCount => Buttons.Count;
-
-        public IList<CustomPushButton> Buttons => _buttons;
+        public int ItemsCount => Items.Count;
+        public IList<CustomPushButton> Items => _items;
 
         internal void BuildButtons(Autodesk.Revit.UI.PulldownButton pulldownButton)
         {
-            foreach (var button in Buttons)
+            foreach (var item in Items)
             {
-                pulldownButton.AddPushButton(button.GetButtonData() as PushButtonData);
+                pulldownButton.AddPushButton(item.GetButtonData() as PushButtonData);
             }
         }
-
     }
 }
