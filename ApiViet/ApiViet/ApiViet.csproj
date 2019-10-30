@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+      None
+    </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC89DB41-B2C5-4A8A-9221-1B4DC17DFC5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ApiViet</RootNamespace>
+    <AssemblyName>ApiViet</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2019\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2019\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\AdWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2019\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(ProgramW6432)\Autodesk\Revit 2019\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIFramework">
+      <HintPath>C:\Program Files\Autodesk\Revit 2019\UIFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\App.cs" />
+    <Compile Include="Command\CmdCommand.cs" />
+    <Compile Include="Command\CmdFirstProgram.cs" />
+    <Compile Include="Command\CmdHelloWorld.cs" />
+    <Compile Include="Command\CmdTabManager.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Helpers\BitmapSourceConverter.cs" />
+    <Compile Include="Helpers\IconRibbon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Application\AppStartProject.cs" />
+    <Compile Include="Ribbon\CustomCombobox.cs" />
+    <Compile Include="Ribbon\CustomComboboxMember.cs" />
+    <Compile Include="Ribbon\CustomPanel.cs" />
+    <Compile Include="Ribbon\CustomPulldownButton.cs" />
+    <Compile Include="Ribbon\CustomPushButton.cs" />
+    <Compile Include="Ribbon\CustomRibbon.cs" />
+    <Compile Include="Ribbon\CustomRibbonItem.cs" />
+    <Compile Include="Ribbon\CustomSplitButton.cs" />
+    <Compile Include="Ribbon\CustomStackedItem.cs" />
+    <Compile Include="Ribbon\CustomTab.cs" />
+    <Compile Include="Ribbon\CustomTextbox.cs" />
+    <Compile Include="Ribbon\CustomToggleButton.cs" />
+    <Compile Include="Application\AppUIRibbon.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApiViet.addin" />
+    <None Include="Resources\minus_5_default_16x16.png" />
+    <None Include="Resources\info_default_32x32.png" />
+    <None Include="Resources\info_default_16x16.png" />
+    <None Include="Resources\info_caribbean_blue_16x16.png" />
+    <None Include="Resources\info_caribbeab_blue_32x32.png" />
+    <None Include="Resources\emoticon_orange_32x32.png" />
+    <None Include="Resources\emoticon_orange_16x16.png" />
+    <None Include="Resources\emoticon_30_royal-blue-32x32.png" />
+    <None Include="Resources\emoticon_30_royal-blue_16x16.png" />
+    <None Include="Resources\circle_soylent-red_32x32.png" />
+    <None Include="Resources\circle_soylent_red_16x16.png" />
+    <None Include="Resources\circle_royal_blue_32x32.png" />
+    <None Include="Resources\circle_royal_blue_16x16.png" />
+    <None Include="Resources\circle_orange_32x32.png" />
+    <None Include="Resources\circle_orange_16x16.png" />
+    <None Include="Resources\circle_guacamole_green_32x32.png" />
+    <None Include="Resources\circle_guacamole_green_16x16.png" />
+    <None Include="Resources\circle_caribbean_blue_32x32.png" />
+    <None Include="Resources\circle_caribbean_blue_16x16.png" />
+    <None Include="Resources\circle_babie_pink_16x16.png" />
+    <None Include="Resources\check-mark_default_32x32.png" />
+    <None Include="Resources\check-mark_default_16x16.png" />
+    <None Include="Resources\arrow_royal_blue_32x32.png" />
+    <None Include="Resources\arrow_royal_blue_16x16.png" />
+    <None Include="Resources\arrow_default_32x32.png" />
+    <None Include="Resources\arrow_default_16x16.png" />
+    <None Include="Resources\arrow_carribean_blue_32x32.png" />
+    <None Include="Resources\x_mark_soylent_red_32x32.png" />
+    <None Include="Resources\x_mark_soylent_red_16x16.png" />
+    <None Include="Resources\x_mark_default_32x32.png" />
+    <None Include="Resources\x_mark_default_16x16.png" />
+    <None Include="Resources\video_play_soylent_red_32x32.png" />
+    <None Include="Resources\video_play_soylent_red_16x16.png" />
+    <None Include="Resources\video_play_royal-blue_32x32.png" />
+    <None Include="Resources\video_play_royal-blue_16x16.png" />
+    <None Include="Resources\video_play_default_32x32.png" />
+    <None Include="Resources\video_play_default_16x16.png" />
+    <None Include="Resources\video_play_caribbean_blue_32x32.png" />
+    <None Include="Resources\video_play_caribbean_blue_16x16.png" />
+    <None Include="Resources\square_soylent_red_32x32.png" />
+    <None Include="Resources\square_soylent_red_16x16.png" />
+    <None Include="Resources\square_royal_blue_32x32.png" />
+    <None Include="Resources\square_royal_blue_16x16.png" />
+    <None Include="Resources\square_orange_32x32.png" />
+    <None Include="Resources\square_orage_16x16.png" />
+    <None Include="Resources\square_guacamole_green_32x32.png" />
+    <None Include="Resources\square_guacamole_green_16x16.png" />
+    <None Include="Resources\square_caribean_blue_16x16.png" />
+    <None Include="Resources\square_caribbean_blue_32x32.png" />
+    <None Include="Resources\search_royal_blue_32x32.png" />
+    <None Include="Resources\search_royal_blue_16x16.png" />
+    <None Include="Resources\search_orange_32x32.png" />
+    <None Include="Resources\search_orange_16x16.png" />
+    <None Include="Resources\search_default_32x32.png" />
+    <None Include="Resources\search_default_16x16.png" />
+    <None Include="Resources\search_caribbean_blue_32x32.png" />
+    <None Include="Resources\search_caribbean_blue_16x16.png" />
+    <None Include="Resources\Revit_16x16.png" />
+    <None Include="Resources\Revit.png" />
+    <None Include="Resources\plus_4_default_32x32.png" />
+    <None Include="Resources\plus_4_default_16x16.png" />
+    <None Include="Resources\ok_default_32x32.png" />
+    <None Include="Resources\ok_default_16x16.png" />
+    <None Include="Resources\minus_5_default_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2019"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2019"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterClean">
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2019\ApiViet.addin" />
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2019\ApiViet.dll" />
+  </Target>
+</Project>
