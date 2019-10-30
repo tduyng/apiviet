@@ -138,41 +138,18 @@ namespace ApiViet.Ribbon
         {
             if (action is null) throw new ArgumentNullException(nameof(action));
             var pulldownButton = new CustomPulldownButton(name,
-                text, this);
-            var pulldownButtonData = pulldownButton.GetButtonData();
-
-            var ribbonItem = _panel.AddItem(pulldownButtonData) as PulldownButton;
-
-
+                text);
             action?.Invoke(pulldownButton);
-            for (int i = 0; i < pulldownButton.ItemsCount; i++)
-            {
-                try{_panel.AddItem( pulldownButton.Items[i].GetButtonData());}
-                catch { }
-            }
-            pulldownButton.BuildButtons(ribbonItem);
-            pulldownButton.RibbonItem = ribbonItem;
-
-            return this;
-        }
-        public CustomPanel CreatePullDownButton(string name, string text)
-        {
-            var pulldownButton = new CustomPulldownButton(name, text, this);
-            for (int i = 0; i < pulldownButton.ItemsCount; i++)
-            {
-                try { _panel.AddItem(pulldownButton.Items[0].GetButtonData()); }
-                catch { }
-            }
             var pulldownButtonData = pulldownButton.GetButtonData();
-            var ribbonItem = _panel.AddItem(pulldownButtonData) as Autodesk.Revit.UI.PulldownButton;
+            var ribbonItem = _panel.AddItem(pulldownButtonData) as PulldownButton;
             pulldownButton.BuildButtons(ribbonItem);
             pulldownButton.RibbonItem = ribbonItem;
-
             return this;
         }
         public CustomPanel CreateSplitButton(string name, string text,Action<CustomSplitButton> action)
         {
-            var splitButton = new CustomSplitButton(name, text, this);
+            if (action is null) throw new ArgumentNullException(nameof(action));
+            var splitButton = new CustomSplitButton(name, text);
             action?.Invoke(splitButton);
             var splitButtonData = splitButton.GetButtonData();
             var ribbonItem = _panel.AddItem(splitButtonData) as SplitButton;

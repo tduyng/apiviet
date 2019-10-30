@@ -11,14 +11,11 @@ namespace ApiViet.Ribbon
 {
     public class CustomSplitButton : CustomPushButton
     {
-        private readonly CustomPanel _panel;
-        private readonly IList<CustomPushButton> _items;
+        private readonly IList<CustomPushButton> _items = new List<CustomPushButton>();
 
-        public CustomSplitButton(string name, string text, CustomPanel panel) :
+        public CustomSplitButton(string name, string text) :
             base(name, text, null)
         {
-            _panel = panel;
-            _items = new List<CustomPushButton>();
         }
         internal override ButtonData GetButtonData()
         {
@@ -70,7 +67,7 @@ namespace ApiViet.Ribbon
             return CreateButton(name, text, commandClassType, null);
         }
 
-        public CustomSplitButton CreatButton<TExternalCommandClass>(string name, string text, Action<CustomPushButton> action)
+        public CustomSplitButton CreateButton<TExternalCommandClass>(string name, string text, Action<CustomPushButton> action)
                                     where TExternalCommandClass: class, IExternalCommand
         {
             var commandClassType = typeof(TExternalCommandClass);

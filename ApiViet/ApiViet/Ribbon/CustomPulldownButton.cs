@@ -12,14 +12,11 @@ namespace ApiViet.Ribbon
     public class CustomPulldownButton : CustomPushButton
     {
         //private readonly IList<CustomPushButton> _buttons = new List<CustomPushButton>();
-        private readonly CustomPanel _panel;
-        private readonly IList<CustomPushButton> _items;
+        private readonly IList<CustomPushButton> _items = new List<CustomPushButton>();
 
-        public CustomPulldownButton(string name, string text, CustomPanel panel) :
+        public CustomPulldownButton(string name, string text) :
             base(name, text, null)
         {
-            _panel = panel;
-            _items = new List<CustomPushButton>();
         }
         internal override ButtonData GetButtonData()
         {

@@ -29,38 +29,75 @@ namespace ApiViet
                         .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
                 .CreateSeparator()
                 .CreateButton("btn2",
-                        "Button2",
-                        typeof(CmdCommand),
-                        btn => btn
-                            .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
-                            .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
-                            .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
+                    "Button2",
+                    typeof(CmdCommand),
+                    btn => btn
+                        .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
+                        .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
+                        .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
                 .CreateSeparator()
                 .CreateStackedItems(si =>
-                        si
-                            .CreateButton<HelloWorld>("stk_btn3", "1",
-                                btn => btn.SetSmallImage(Resources.circle_caribbean_blue_16x16))
-                            .CreateButton<HelloWorld>("stk_btn4", "2",
-                                btn => btn.SetSmallImage(Resources.circle_orange_16x16))
-                            .CreateButton<HelloWorld>("stk_btn5", "3",
-                                btn => btn.SetSmallImage(Resources.circle_orange_16x16)))
+                    si
+                        .CreateButton<HelloWorld>("siButton1", "1",
+                            btn => btn.SetSmallImage(Resources.circle_caribbean_blue_16x16))
+                        .CreateButton<HelloWorld>("siButton2", "2",
+                            btn => btn.SetSmallImage(Resources.circle_orange_16x16))
+                        .CreateButton<HelloWorld>("siButton3", "3",
+                            btn => btn.SetSmallImage(Resources.circle_orange_16x16)))
                 .CreateStackedItems(si =>
-                        si
-                            .CreateButton<HelloWorld>("stk_btn6", "4",
-                                btn => btn.SetSmallImage(Resources.circle_guacamole_green_16x16))
-                            .CreateButton<HelloWorld>("stk_btn7", "5",
-                                btn => btn.SetSmallImage(Resources.circle_soylent_red_16x16))
-                            .CreateButton<HelloWorld>("stk_btn8", "6",
-                                btn => btn.SetSmallImage(Resources.emoticon_orange_16x16)))
-                .CreatePullDownButton("pulBtn1",
-                                        "Options",
-                                    pull => pull
-                                            .CreateButton<HelloWorld>("pul_btn3", "x",
-                                                btn => btn.SetSmallImage(Resources.circle_caribbean_blue_16x16))
-                                            .CreateButton<HelloWorld>("pul_btn4", "y",
-                                                btn => btn.SetSmallImage(Resources.circle_orange_16x16))
-                                            .CreateButton<HelloWorld>("pul_btn5", "z",
-                                                btn => btn.SetSmallImage(Resources.circle_orange_16x16)));
+                    si
+                        .CreateButton<HelloWorld>("siButton4", "4",
+                            btn => btn.SetSmallImage(Resources.circle_guacamole_green_16x16))
+                        .CreateButton<HelloWorld>("siButton5", "5",
+                            btn => btn.SetSmallImage(Resources.circle_soylent_red_16x16))
+                        .CreateButton<HelloWorld>("siButton6", "6",
+                            btn => btn.SetSmallImage(Resources.emoticon_orange_16x16)))
+                .CreatePullDownButton("pdbBtn1",
+                    "Options",
+                    pdb =>
+                    {
+                        pdb.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
+                            .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
+                            .SetToolTips("This is a test for creating a pulldown button");
+                        pdb.CreateButton<HelloWorld>("pdbButtonX", "Button x",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_caribbean_blue_32x32)
+                                    .SetSmallImage(Resources.circle_caribbean_blue_16x16))
+
+                            .CreateButton<HelloWorld>("pdbButtonY", "Button y",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("pdbButtonZ", "Button z",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .SetContextualHelp(ContextualHelpType.Url, "https://github.com/TienDuyNGUYEN")
+                            .SetToolTips("This is a awesome button!");
+                    })
+                .CreateSplitButton("splBtn1",
+                    "Selection",
+                    spl =>
+                    {
+                        spl.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
+                            .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
+                            .SetToolTips("This is a test for creating a pulldown button");
+                        spl.CreateButton<HelloWorld>("splButton1", "Button 1",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_caribbean_blue_32x32)
+                                    .SetSmallImage(Resources.circle_caribbean_blue_16x16))
+
+                            .CreateButton<HelloWorld>("splButton2", "Button 2",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("splButton", "Button 3",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .SetContextualHelp(ContextualHelpType.Url, "https://github.com/TienDuyNGUYEN")
+                            .SetToolTips("This is a awesome button!");
+                    });
 
 
             ribbon.Tab(nameTab)
