@@ -20,7 +20,6 @@ namespace ApiViet.Ribbon
         {
         }
 
-
         internal new TextBoxData GetButtonData()
         {
             TextBoxData txtData = new TextBoxData(_name);
@@ -40,10 +39,8 @@ namespace ApiViet.Ribbon
             {
                 txtData.ToolTipImage = _toolTipsImage;
             }
-
             return txtData;
         }
-
 
         // Events pressed for TextBox 
         private static void txtBox_EnterPressed(object sender, Autodesk.Revit.UI.Events.TextBoxEnterPressedEventArgs e)

@@ -41,10 +41,10 @@ E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\pt-BR\AdWindows.resources.dll
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\ru-RU\AdWindows.resources.dll
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\zh-CN\AdWindows.resources.dll
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\bin\Debug\zh-TW\AdWindows.resources.dll
-E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csprojAssemblyReference.cache
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.Properties.Resources.resources
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.GenerateResource.cache
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CoreCompileInputs.cache
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CopyComplete
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.dll
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.pdb
+E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csprojAssemblyReference.cache

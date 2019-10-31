@@ -3,6 +3,7 @@ using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI;
 using ApiViet.Properties;
 using ApiViet.Ribbon;
+using ApiViet.Learning;
 
 #endregion
 
@@ -17,20 +18,20 @@ namespace ApiViet
         public Result OnStartup(UIControlledApplication uiApp)
         {
             CustomRibbon ribbon = new CustomRibbon(uiApp);
-            string nameTab = "TD";
-            ribbon.Tab(nameTab)
-                .Panel("Panel1")
-                .CreateButton("btn1",
-                    "Button1",
-                    typeof(CmdCommand),
+            var myTab = ribbon.Tab("TD");
+            myTab
+                .Panel("Learning")
+                .CreateButton("btnIdElement",
+                    "ID Element",
+                    typeof(CmdSelectElement),
                     btn => btn
                         .SetLargeImage(Resources.arrow_royal_blue_32x32)
                         .SetSmallImage(Resources.arrow_royal_blue_16x16)
                         .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
                 .CreateSeparator()
-                .CreateButton("btn2",
-                    "Button2",
-                    typeof(CmdCommand),
+                .CreateButton("btnCollectWindow",
+                    "Collect\nWindow",
+                    typeof(CmdCollector),
                     btn => btn
                         .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                         .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
@@ -38,20 +39,21 @@ namespace ApiViet
                 .CreateSeparator()
                 .CreateStackedItems(si =>
                     si
-                        .CreateButton<HelloWorld>("siButton1", "1",
+                        .CreateButton<CmdCollectorWithLINQ>("BtnCreateFamily", "CreateCars",
                             btn => btn.SetSmallImage(Resources.circle_caribbean_blue_16x16))
-                        .CreateButton<HelloWorld>("siButton2", "2",
+                        .CreateButton<CmdCreateLineBaseElement>("btnCreateWall", "CreateWall",
                             btn => btn.SetSmallImage(Resources.circle_orange_16x16))
-                        .CreateButton<HelloWorld>("siButton3", "3",
+                        .CreateButton<HelloWorld>("siButton3", "Not Assign",
                             btn => btn.SetSmallImage(Resources.circle_orange_16x16)))
                 .CreateStackedItems(si =>
                     si
-                        .CreateButton<HelloWorld>("siButton4", "4",
+                        .CreateButton<HelloWorld>("siButton4", "Not Assign",
                             btn => btn.SetSmallImage(Resources.circle_guacamole_green_16x16))
-                        .CreateButton<HelloWorld>("siButton5", "5",
+                        .CreateButton<HelloWorld>("siButton5", "Not Assign",
                             btn => btn.SetSmallImage(Resources.circle_soylent_red_16x16))
-                        .CreateButton<HelloWorld>("siButton6", "6",
+                        .CreateButton<HelloWorld>("siButton6", "Not Assign",
                             btn => btn.SetSmallImage(Resources.emoticon_orange_16x16)))
+                .CreateSeparator()
                 .CreatePullDownButton("pdbBtn1",
                     "Options",
                     pdb =>
@@ -59,16 +61,16 @@ namespace ApiViet
                         pdb.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                             .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
                             .SetToolTips("This is a test for creating a pulldown button");
-                        pdb.CreateButton<HelloWorld>("pdbButtonX", "Button x",
+                        pdb.CreateButton<HelloWorld>("pdbButtonX", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_caribbean_blue_32x32)
                                     .SetSmallImage(Resources.circle_caribbean_blue_16x16))
 
-                            .CreateButton<HelloWorld>("pdbButtonY", "Button y",
+                            .CreateButton<HelloWorld>("pdbButtonY", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
-                            .CreateButton<HelloWorld>("pdbButtonZ", "Button z",
+                            .CreateButton<HelloWorld>("pdbButtonZ", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
@@ -82,16 +84,16 @@ namespace ApiViet
                         spl.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                             .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
                             .SetToolTips("This is a test for creating a pulldown button");
-                        spl.CreateButton<HelloWorld>("splButton1", "Button 1",
+                        spl.CreateButton<HelloWorld>("splButton1", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_caribbean_blue_32x32)
                                     .SetSmallImage(Resources.circle_caribbean_blue_16x16))
 
-                            .CreateButton<HelloWorld>("splButton2", "Button 2",
+                            .CreateButton<HelloWorld>("splButton2", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
-                            .CreateButton<HelloWorld>("splButton", "Button 3",
+                            .CreateButton<HelloWorld>("splButton", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
@@ -100,10 +102,10 @@ namespace ApiViet
                     });
 
 
-            ribbon.Tab(nameTab)
+            myTab
                 .Panel("Panel2")
                     .CreateButton("pl2_btn1",
-                        "Button1",
+                        "Not Assign",
                         typeof(CmdCommand),
                         btn => btn
                             .SetLargeImage(Resources.arrow_royal_blue_32x32)
@@ -111,18 +113,19 @@ namespace ApiViet
                             .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
                     .CreateSeparator()
                     .CreateButton("pl2_btn2",
-                        "Button2",
+                        "Not Assign",
                         typeof(CmdCommand),
                         btn => btn
                             .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                             .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
                             .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"));
 
-            ribbon
-                .Tab(Autodesk.Revit.UI.Tab.AddIns)
-                .Panel("VC1")
-                .CreateButton<HelloWorld>("btn1_1", "Button1",
-                    btn => btn.SetLargeImage(Resources.x_mark_soylent_red_16x16));
+            //Create the ribbon on the systemtab
+            //ribbon
+            //    .Tab(Autodesk.Revit.UI.Tab.AddIns)
+            //    .Panel("VC1")
+            //    .CreateButton<HelloWorld>("btn1_1", "Button1",
+            //        btn => btn.SetLargeImage(Resources.x_mark_soylent_red_16x16));
 
             return Result.Succeeded;
         }
