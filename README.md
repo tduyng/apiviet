@@ -67,7 +67,7 @@ Learn and do some addin revit with C# (Revit 2019)
 
 MIT © [Tien-Duy NGUYEN](https://github.com/TienDuyNGUYEN)
 
-Thank Victor Chekalin for inspiring me for this solution [Victor Chekalin](https://github.com/chekalin-v)
+Thank [Victor Chekalin](https://github.com/chekalin-v) for inspiring me for this solution.
 
 
 ```So let's go!``` 
