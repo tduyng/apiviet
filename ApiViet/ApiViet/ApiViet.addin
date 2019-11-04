@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Addin APIViet</Name>
+    <Assembly>ApiViet.dll</Assembly>
+    <FullClassName>ApiViet.AppStartProject</FullClassName>
+    <ClientId>cbc43603-2b2b-45e3-a533-474194dabb74</ClientId>
+    <VendorId>Tien Duy NGUYEN</VendorId>
+    <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Addin APIViet</Name>
+    <Assembly>ApiViet.dll</Assembly>
+    <FullClassName>ApiViet.Learning.AppEventRevit</FullClassName>
+    <ClientId>
+      13FDD5CB-9BFC-43F5-9392-B9FA374686C0
+    </ClientId>
+    <VendorId>Tien Duy NGUYEN</VendorId>
+    <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Addin APIViet</Name>
+    <Assembly>ApiViet.dll</Assembly>
+    <FullClassName>ApiViet.Learning.AppExistingButton</FullClassName>
+    <ClientId>
+      34647498-FA1C-4221-A8B5-4F54571233A9
+    </ClientId>
+    <VendorId>Tien Duy NGUYEN</VendorId>
+    <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

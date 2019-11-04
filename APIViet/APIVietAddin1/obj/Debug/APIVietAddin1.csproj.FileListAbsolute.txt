@@ -1,5 +1,0 @@
-E:\01 - GITHUP\APIViet\APIViet\APIVietAddin1\bin\Debug\APIVietAddin1.dll
-E:\01 - GITHUP\APIViet\APIViet\APIVietAddin1\bin\Debug\APIVietAddin1.pdb
-E:\01 - GITHUP\APIViet\APIViet\APIVietAddin1\obj\Debug\APIVietAddin1.csproj.CoreCompileInputs.cache
-E:\01 - GITHUP\APIViet\APIViet\APIVietAddin1\obj\Debug\APIVietAddin1.dll
-E:\01 - GITHUP\APIViet\APIViet\APIVietAddin1\obj\Debug\APIVietAddin1.pdb

@@ -1,4 +1,0 @@
-C:\Users\tien-duy.nguyen\Source\Repos\APIViet.Ribbon\APIViet\obj\Debug\APIViet.csprojAssemblyReference.cache
-C:\Users\tien-duy.nguyen\Source\Repos\APIViet.Ribbon\APIViet\obj\Debug\APIViet.csproj.CoreCompileInputs.cache
-E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.csprojAssemblyReference.cache
-E:\01 - GITHUP\APIViet\APIViet.Ribbon\APIViet\obj\Debug\APIViet.csproj.CoreCompileInputs.cache
