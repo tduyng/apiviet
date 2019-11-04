@@ -19,7 +19,9 @@ namespace ApiViet.Ribbon
         private readonly CustomRibbon _ribbon;
         private readonly Autodesk.Revit.UI.Tab? _systemTab;
         private readonly string _name;
-        //private readonly RibbonTab _tab;
+
+
+
         public CustomTab(CustomRibbon ribbon, string name)
         {
             _ribbon = ribbon;
@@ -31,6 +33,7 @@ namespace ApiViet.Ribbon
             _ribbon = ribbon;
             _systemTab = systemTab;
         }
+
         internal CustomRibbon Ribbon => _ribbon;
         public CustomPanel Panel(string panelTitle)
         {

@@ -4,6 +4,8 @@ using Autodesk.Revit.UI;
 using ApiViet.Properties;
 using ApiViet.Ribbon;
 using ApiViet.Learning;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.DB.Structure;
 
 #endregion
 
@@ -19,15 +21,18 @@ namespace ApiViet
         {
             CustomRibbon ribbon = new CustomRibbon(uiApp);
             var myTab = ribbon.Tab("TD");
-            myTab
-                .Panel("Learning")
-                .CreateButton("btnIdElement",
-                    "ID Element",
-                    typeof(CmdSelectElement),
+            var panelLearning = myTab.Panel("Learning");
+            var btn1 = panelLearning
+                .CreateButton("btnInfoElement",
+                    "Info\nElement",
+                    typeof(CmdPickMultiObjects),
                     btn => btn
                         .SetLargeImage(Resources.arrow_royal_blue_32x32)
                         .SetSmallImage(Resources.arrow_royal_blue_16x16)
                         .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
+                        .ConvertToPushButton;
+
+            panelLearning
                 .CreateSeparator()
                 .CreateButton("btnCollectWindow",
                     "Collect\nWindow",
@@ -35,48 +40,85 @@ namespace ApiViet
                     btn => btn
                         .SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                         .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
-                        .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
+                        .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"));
+            panelLearning
                 .CreateSeparator()
                 .CreateStackedItems(si =>
                     si
-                        .CreateButton<CmdCollectorWithLINQ>("BtnCreateFamily", "CreateCars",
+                        .CreateButton<CmdCollectorWithLINQ>("btnCreateFamily", "CreateCars",
                             btn => btn.SetSmallImage(Resources.circle_caribbean_blue_16x16))
                         .CreateButton<CmdCreateLineBaseElement>("btnCreateWall", "CreateWall",
                             btn => btn.SetSmallImage(Resources.circle_orange_16x16))
-                        .CreateButton<HelloWorld>("siButton3", "Not Assign",
+                        .CreateButton<CmdGetParameter>("btnGetParameter", "Get Parameter",
                             btn => btn.SetSmallImage(Resources.circle_orange_16x16)))
                 .CreateStackedItems(si =>
                     si
-                        .CreateButton<HelloWorld>("siButton4", "Not Assign",
+                        .CreateButton<CmdSetParameter>("btnSetParameter", "Set Parameter",
                             btn => btn.SetSmallImage(Resources.circle_guacamole_green_16x16))
-                        .CreateButton<HelloWorld>("siButton5", "Not Assign",
+                        .CreateButton<CmdChangeLocation>("btnChangeLoc", "Change Location",
                             btn => btn.SetSmallImage(Resources.circle_soylent_red_16x16))
-                        .CreateButton<HelloWorld>("siButton6", "Not Assign",
+                        .CreateButton<CmdEditElement>("btnEditElement", "EditElement",
                             btn => btn.SetSmallImage(Resources.emoticon_orange_16x16)))
-                .CreateSeparator()
+                .CreateSeparator();
+
+            panelLearning
                 .CreatePullDownButton("pdbBtn1",
+                   "Options",
+                   pdb =>
+                   {
+                       pdb.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
+                           .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
+                           .SetToolTips("This is a test for creating a pulldown button");
+                       pdb.CreateButton<CmdSelectGeometry>("cmdSelectGeometry", "Select Geometry",
+                               btn => btn
+                                   .SetLargeImage(Resources.circle_caribbean_blue_32x32)
+                                   .SetSmallImage(Resources.circle_caribbean_blue_16x16))
+                          .CreateButton<HelloWorld>("pdbY", "Not Assign",
+                               btn => btn
+                                   .SetLargeImage(Resources.circle_orange_32x32)
+                                   .SetSmallImage(Resources.circle_orange_16x16)
+                                   .SetToolTips("Turn On Event"))
+                           .CreateButton<HelloWorld>("pdbButtonZ", "Not Assign",
+                               btn => btn
+                                   .SetLargeImage(Resources.circle_orange_32x32)
+                                   .SetSmallImage(Resources.circle_orange_16x16))
+                           .SetContextualHelp(ContextualHelpType.Url, "https://github.com/TienDuyNGUYEN")
+                           .SetToolTips("This is a awesome button!");
+                   });
+
+            var pdbEvent = panelLearning
+                .CreatePullDownButton("pdbBtn2",
                     "Options",
                     pdb =>
                     {
                         pdb.SetLargeImage(Resources.video_play_caribbean_blue_32x32)
                             .SetSmallImage(Resources.video_play_caribbean_blue_16x16)
                             .SetToolTips("This is a test for creating a pulldown button");
-                        pdb.CreateButton<HelloWorld>("pdbButtonX", "Not Assign",
+                        pdb.CreateButton<UIEvent>("btnEvent", "Event",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_caribbean_blue_32x32)
-                                    .SetSmallImage(Resources.circle_caribbean_blue_16x16))
+                                    .SetSmallImage(Resources.circle_caribbean_blue_16x16)
+                                    .SetToolTips("Turn On Event"))
+                            .CreateButton<HelloWorld>("pdbY", "Not Assign 1",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("pdbButtonZ", "Not Assign 2",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16));
+                    }).ConvertToPulldownButton;
+            var btnData1 = new CustomPushButton("pdbButton2Z", "Not Assign", typeof(HelloWorld));
+            btnData1.SetLargeImage(Resources.circle_caribbean_blue_32x32);
+            btnData1.SetSmallImage(Resources.circle_caribbean_blue_32x32);
+            btnData1.SetToolTips("Turn on Event");
+            var btnSpecial1 = pdbEvent.AddPushButton((PushButtonData)btnData1.GetButtonData()) ;
+            var btnData2 = new CustomPushButton("pdbButton2Z2", "Not Assign", typeof(HelloWorld));
+            btnData1.SetLargeImage(Resources.circle_caribbean_blue_32x32);
+            btnData1.SetSmallImage(Resources.circle_caribbean_blue_32x32);
+            var btnSpecial2 = pdbEvent.AddPushButton((PushButtonData)btnData1.GetButtonData());
 
-                            .CreateButton<HelloWorld>("pdbButtonY", "Not Assign",
-                                btn => btn
-                                    .SetLargeImage(Resources.circle_orange_32x32)
-                                    .SetSmallImage(Resources.circle_orange_16x16))
-                            .CreateButton<HelloWorld>("pdbButtonZ", "Not Assign",
-                                btn => btn
-                                    .SetLargeImage(Resources.circle_orange_32x32)
-                                    .SetSmallImage(Resources.circle_orange_16x16))
-                            .SetContextualHelp(ContextualHelpType.Url, "https://github.com/TienDuyNGUYEN")
-                            .SetToolTips("This is a awesome button!");
-                    })
+            panelLearning
                 .CreateSplitButton("splBtn1",
                     "Selection",
                     spl =>
@@ -93,7 +135,23 @@ namespace ApiViet
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
-                            .CreateButton<HelloWorld>("splButton", "Not Assign",
+                            .CreateButton<HelloWorld>("splButton3", "Not Assign",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("splButton4", "Not Assign",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("splButton5", "Not Assign",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("splButton6", "Not Assign",
+                                btn => btn
+                                    .SetLargeImage(Resources.circle_orange_32x32)
+                                    .SetSmallImage(Resources.circle_orange_16x16))
+                            .CreateButton<HelloWorld>("splButton7", "Not Assign",
                                 btn => btn
                                     .SetLargeImage(Resources.circle_orange_32x32)
                                     .SetSmallImage(Resources.circle_orange_16x16))
@@ -111,7 +169,7 @@ namespace ApiViet
                             .SetLargeImage(Resources.arrow_royal_blue_32x32)
                             .SetSmallImage(Resources.arrow_royal_blue_16x16)
                             .SetContextualHelp(ContextualHelpType.Url, "https://help.autodesk.com"))
-                    .CreateSeparator()
+                .CreateSeparator()
                     .CreateButton("pl2_btn2",
                         "Not Assign",
                         typeof(CmdCommand),

@@ -11,7 +11,7 @@ using Autodesk.Revit.UI;
 namespace ApiViet.Learning
 {
     [Transaction(TransactionMode.Manual)]
-    class CmdCollector : IExternalCommand
+    public partial class CmdCollector : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -39,6 +39,8 @@ namespace ApiViet.Learning
 
             TaskDialog.Show("Window", infoWindows.ToString());
             return Result.Succeeded;
-            }
         }
     }
+   
+}
+

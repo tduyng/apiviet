@@ -1,12 +1,15 @@
 #region Namespaces
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Media.Imaging;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Windows;
+using RibbonItem = Autodesk.Revit.UI.RibbonItem;
+
 #endregion
 
 namespace ApiViet.Ribbon
@@ -15,15 +18,20 @@ namespace ApiViet.Ribbon
     {
         private readonly CustomTab _tab;
         private readonly Autodesk.Revit.UI.RibbonPanel _panel;
+        public PushButton ConvertToPushButton { get; set; }
+        public PulldownButton ConvertToPulldownButton { get; set; }
+        public SplitButton ConvertToSpliButton { get; set; }
+        public RibbonItem ConvertToStackedItem { get; set; }
 
         public CustomPanel(CustomTab tab, Autodesk.Revit.UI.RibbonPanel panel)
         {
             _tab = tab;
             _panel = panel;
+
         }
 
-        internal Autodesk.Revit.UI.RibbonPanel Source => _panel;
-        internal CustomTab Tab => _tab;
+        public Autodesk.Revit.UI.RibbonPanel Source => _panel;
+        public CustomTab Tab => _tab;
 
 
         /// <summary>
@@ -89,8 +97,7 @@ namespace ApiViet.Ribbon
                 externalCommandType);
             action?.Invoke(button);
             var buttonData = button.GetButtonData();
-            try { _panel.AddItem(buttonData); }
-            catch { }
+            ConvertToPushButton = _panel.AddItem(buttonData) as PushButton ;
             return this;
         }
 
@@ -136,25 +143,27 @@ namespace ApiViet.Ribbon
                                   string text,
                                   Action<CustomPulldownButton> action)
         {
-            if (action is null) throw new ArgumentNullException(nameof(action));
             var pulldownButton = new CustomPulldownButton(name,
                 text);
+            
             action?.Invoke(pulldownButton);
             var pulldownButtonData = pulldownButton.GetButtonData();
-            var ribbonItem = _panel.AddItem(pulldownButtonData) as PulldownButton;
-            pulldownButton.BuildButtons(ribbonItem);
-            pulldownButton.RibbonItem = ribbonItem;
+            ConvertToPulldownButton = _panel.AddItem(pulldownButtonData) as PulldownButton;
+            pulldownButton.BuildButtons(ConvertToPulldownButton);
+            pulldownButton.RibbonItem = ConvertToPulldownButton;
             return this;
         }
+        
+
+
         public CustomPanel CreateSplitButton(string name, string text,Action<CustomSplitButton> action)
         {
-            if (action is null) throw new ArgumentNullException(nameof(action));
             var splitButton = new CustomSplitButton(name, text);
             action?.Invoke(splitButton);
             var splitButtonData = splitButton.GetButtonData();
-            var ribbonItem = _panel.AddItem(splitButtonData) as SplitButton;
-            splitButton.BuildButtons(ribbonItem);
-            splitButton.RibbonItem = ribbonItem;
+            ConvertToSpliButton = _panel.AddItem(splitButtonData) as SplitButton;
+            splitButton.BuildButtons(ConvertToSpliButton);
+            splitButton.RibbonItem = ConvertToSpliButton;
             return this;
         }
         public CustomPanel CreateTextBox(string name, Action<CustomTextBox> action) 

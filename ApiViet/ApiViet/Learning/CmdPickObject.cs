@@ -12,7 +12,7 @@ using Autodesk.Revit.UI.Selection;
 namespace ApiViet.Learning
 {
     [Transaction(TransactionMode.Manual)]
-    class CmdSelectElement : IExternalCommand
+    class CmdPickObject : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {

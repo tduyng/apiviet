@@ -31,6 +31,8 @@ namespace ApiViet.Ribbon
         protected string _description;
         private readonly string _assemblyLocation;
         protected ContextualHelp _contextualHelp;
+        public PushButton ConvertToPushButton { get; set; }
+
 
         public CustomPushButton(string name,
                       string text,

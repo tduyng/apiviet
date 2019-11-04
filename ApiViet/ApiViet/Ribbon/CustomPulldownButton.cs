@@ -96,8 +96,54 @@ namespace ApiViet.Ribbon
         {
             foreach (var item in Items)
             {
-                pulldownButton.AddPushButton(item.GetButtonData() as PushButtonData);
+                ConvertToPushButton = pulldownButton.AddPushButton(item.GetButtonData() as PushButtonData);
             }
+        }
+
+
+        //Try add the "extension" method to add a separed button to the pulldown button but it's not still work
+
+        public PushButton AddButton(Autodesk.Revit.UI.PulldownButton pulldownButton,
+            string name,
+            string text,
+            Type externalCommandType,
+            Action<CustomPushButton> action)
+        {
+            var button = new CustomPushButton(name,
+                text,
+                externalCommandType);
+            action?.Invoke(button);
+            return pulldownButton.AddPushButton(button.GetButtonData() as PushButtonData);
+        }
+        public PushButton AddButton<TExternalCommandClass>(Autodesk.Revit.UI.PulldownButton pulldownButton,
+            string name,
+            string text)
+            where TExternalCommandClass : class, IExternalCommand
+        {
+            var commandClassType = typeof(TExternalCommandClass);
+            return AddButton(pulldownButton, name, text,commandClassType,null);
+        }
+        public PushButton AddButton<TExternalCommandClass>(Autodesk.Revit.UI.PulldownButton pulldownButton,
+            string name,
+            string text,
+            Action<CustomPushButton> action)
+            where TExternalCommandClass : class, IExternalCommand
+        {
+            var commandClassType = typeof(TExternalCommandClass);
+            return AddButton(pulldownButton, name, text, commandClassType, action);
+        }
+        public PushButton AddButton(Autodesk.Revit.UI.PulldownButton pulldownButton,
+            string name,
+            string text,
+            Action<CustomPushButton> action)
+        {
+            return AddButton(pulldownButton, name, text,null, action);
+        }
+        public PushButton AddButton(Autodesk.Revit.UI.PulldownButton pulldownButton,
+            string name,
+            string text)
+        {
+            return AddButton(pulldownButton, name, text, null, null);
         }
     }
 }
