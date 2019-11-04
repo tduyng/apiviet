@@ -114,9 +114,9 @@ namespace ApiViet
             btnData1.SetToolTips("Turn on Event");
             var btnSpecial1 = pdbEvent.AddPushButton((PushButtonData)btnData1.GetButtonData()) ;
             var btnData2 = new CustomPushButton("pdbButton2Z2", "Not Assign", typeof(HelloWorld));
-            btnData1.SetLargeImage(Resources.circle_caribbean_blue_32x32);
-            btnData1.SetSmallImage(Resources.circle_caribbean_blue_32x32);
-            var btnSpecial2 = pdbEvent.AddPushButton((PushButtonData)btnData1.GetButtonData());
+            btnData2.SetLargeImage(Resources.circle_caribbean_blue_32x32);
+            btnData2.SetSmallImage(Resources.circle_caribbean_blue_32x32);
+            var btnSpecial2 = pdbEvent.AddPushButton((PushButtonData)btnData2.GetButtonData());
 
             panelLearning
                 .CreateSplitButton("splBtn1",

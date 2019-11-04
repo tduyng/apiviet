@@ -18,14 +18,4 @@
     <VendorId>Tien Duy NGUYEN</VendorId>
     <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
   </AddIn>
-  <AddIn Type="Application">
-    <Name>Addin APIViet</Name>
-    <Assembly>ApiViet.dll</Assembly>
-    <FullClassName>ApiViet.Learning.AppExistingButton</FullClassName>
-    <ClientId>
-      34647498-FA1C-4221-A8B5-4F54571233A9
-    </ClientId>
-    <VendorId>Tien Duy NGUYEN</VendorId>
-    <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
-  </AddIn>
 </RevitAddIns>
