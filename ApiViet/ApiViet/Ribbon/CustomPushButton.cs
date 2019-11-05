@@ -55,17 +55,17 @@ namespace ApiViet.Ribbon
 
         public CustomPushButton SetLargeImage(Bitmap largeImage)
         {
-            _largeImage = BitmapSourceConverter.ConvertFromBitmap(largeImage);
+            _largeImage = ImageUtils.ConvertFromBitmap(largeImage);
             return this;
         }
         public CustomPushButton SetLargeImage(Icon largeImage)
         {
-            _largeImage = BitmapSourceConverter.ConvertFromIcon(largeImage);
+            _largeImage = ImageUtils.ConvertFromIcon(largeImage);
             return this;
         }
         public CustomPushButton SetLargeImage(string largeImageFullName)
         {
-            _largeImage = IconRibbon.GetEmbededImageFromSource(largeImageFullName);
+            _largeImage = ImageUtils.GetEmbededImageFromSource(largeImageFullName);
             return this;
         }
 
@@ -77,17 +77,17 @@ namespace ApiViet.Ribbon
         }
         public CustomPushButton SetSmallImage(Bitmap smallImage)
         {
-            _smallImage = BitmapSourceConverter.ConvertFromBitmap(smallImage);
+            _smallImage = ImageUtils.ConvertFromBitmap(smallImage);
             return this;
         }
         public CustomPushButton SetSmallImage(Icon smallImage)
         {
-            _smallImage = BitmapSourceConverter.ConvertFromIcon(smallImage);
+            _smallImage = ImageUtils.ConvertFromIcon(smallImage);
             return this;
         }
         public CustomPushButton SetSmallImage(string smallImageFullName)
         {
-            _smallImage = IconRibbon.GetEmbededImageFromSource(smallImageFullName);
+            _smallImage = ImageUtils.GetEmbededImageFromSource(smallImageFullName);
             return this;
         }
 
@@ -99,17 +99,17 @@ namespace ApiViet.Ribbon
         }
         public CustomPushButton SetToolTipsImage(Bitmap toolTipsImage)
         {
-            _toolTipsImage = BitmapSourceConverter.ConvertFromBitmap(toolTipsImage);
+            _toolTipsImage = ImageUtils.ConvertFromBitmap(toolTipsImage);
             return this;
         }
         public CustomPushButton SetToolTipsImage(Icon toolTipsImage)
         {
-            _toolTipsImage = BitmapSourceConverter.ConvertFromIcon(toolTipsImage);
+            _toolTipsImage = ImageUtils.ConvertFromIcon(toolTipsImage);
             return this;
         }
         public CustomPushButton SetToolTipsImage(string toolTipsImageFullName)
         {
-            _toolTipsImage = IconRibbon.GetEmbededImageFromSource(toolTipsImageFullName);
+            _toolTipsImage = ImageUtils.GetEmbededImageFromSource(toolTipsImageFullName);
             return this;
         }
 

@@ -47,4 +47,3 @@ E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CoreCompileInputs.
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csproj.CopyComplete
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.dll
 E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.pdb
-E:\01-GITHUB\apiviet\ApiViet\ApiViet\obj\Debug\ApiViet.csprojAssemblyReference.cache

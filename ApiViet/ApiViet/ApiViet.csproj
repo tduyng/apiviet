@@ -65,16 +65,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\App.cs" />
+    <Compile Include="Application\AppRunTest.cs" />
     <Compile Include="Command\CmdCommand.cs" />
     <Compile Include="Command\CmdFirstProgram.cs" />
     <Compile Include="Command\CmdHelloWorld.cs" />
     <Compile Include="Command\CmdTabManager.cs" />
     <Compile Include="Command\Command.cs" />
-    <Compile Include="Helpers\BitmapSourceConverter.cs" />
-    <Compile Include="Helpers\IconRibbon.cs" />
+    <Compile Include="Helpers\Enumerations\FileInfoKey.cs" />
+    <Compile Include="Helpers\Enumerations\FileInfoType.cs" />
+    <Compile Include="Helpers\Enumerations\RevitVersion.cs" />
+    <Compile Include="Helpers\Enumerations\StorageUnit.cs" />
+    <Compile Include="Helpers\FileUtils.cs" />
+    <Compile Include="Helpers\ImageUtils.cs" />
+    <Compile Include="Helpers\LabelUtils.cs" />
+    <Compile Include="Helpers\OleUtils.cs" />
     <Compile Include="Helpers\ParameterUtils.cs" />
-    <Compile Include="Learning\AppExistingButton.cs" />
+    <Compile Include="Helpers\StreamUtils.cs" />
+    <Compile Include="Helpers\StringUtils.cs" />
+    <Compile Include="Ribbon\ExistingButton.cs" />
     <Compile Include="Learning\CmdChangeLocation.cs" />
     <Compile Include="Learning\CmdCollector.cs" />
     <Compile Include="Learning\CmdCollectorWithLINQ.cs" />
@@ -83,6 +91,7 @@
     <Compile Include="Learning\CmdGetParameter.cs" />
     <Compile Include="Learning\CmdPlaceLoopElement.cs" />
     <Compile Include="Learning\CmdPickObject.cs" />
+    <Compile Include="Learning\CmdRetrieveStructureElements.cs" />
     <Compile Include="Learning\CmdSelectGeometry.cs" />
     <Compile Include="Learning\CmdSetParameter.cs" />
     <Compile Include="Learning\DynamicModelUpdate.cs" />
@@ -113,7 +122,9 @@
     <Compile Include="SelectByParameter\SelectionFilters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApiViet.addin" />
+    <Content Include="ApiViet.addin">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Resources\minus_5_default_16x16.png" />
     <None Include="Resources\info_default_32x32.png" />
     <None Include="Resources\info_default_16x16.png" />

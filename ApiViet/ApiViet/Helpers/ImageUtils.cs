@@ -8,6 +8,9 @@ using Autodesk.Revit.UI;
 using System.Reflection;
 using System.IO;
 using System.Diagnostics;
+using System.Drawing;
+using System.Windows;
+using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 #endregion
@@ -18,8 +21,59 @@ namespace ApiViet.Helpers
     /// Get image
     /// </summary>
 
-    public static class IconRibbon
+    public static class ImageUtils
     {
+        /// <summary>
+        /// Get Image form resources.resx
+        /// </summary>
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")] //Creates a GDI bitmap object from a GDI+
+        private static extern bool DeleteObject(IntPtr hObject);
+
+        public static BitmapSource ConvertFromBitmap(Bitmap image)
+        {
+            if (image == null)
+                throw new ArgumentNullException(nameof(image));
+            //Intptr: A handle to the GDI bitmap object that this method creates.
+            IntPtr hBitmap = image.GetHbitmap();
+            try
+            {
+                //Returns a managed BitmapSource, based on the provided pointer to an unmanaged bitmap and palette information
+                var bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(
+                    hBitmap,
+                    IntPtr.Zero,
+                    System.Windows.Int32Rect.Empty,
+                    BitmapSizeOptions.FromEmptyOptions());
+                return bs;
+            }
+            finally
+            {
+                DeleteObject(hBitmap);
+            }
+        }
+        public static BitmapSource ConvertFromIcon(Icon icon)
+        {
+            try
+            {
+                //Returns a managed BitmapSource, based on the provided pointer to an unmanaged icon image.
+                var bs = Imaging
+                    .CreateBitmapSourceFromHIcon(icon.Handle,
+                        new Int32Rect(0, 0, icon.Width, icon.Height),
+                        BitmapSizeOptions.FromWidthAndHeight(icon.Width, icon.Height));
+                return bs;
+            }
+            finally
+            {
+                DeleteObject(icon.Handle);
+            }
+        }
+
+
+        /// <summary>
+        /// Get Image from resources folder
+        /// </summary>
+        /// <param name="embededlargeImageName"></param>
+        /// <returns></returns>
+
         // Case: when we dont bother the extention of image input and return an imagsesource of Image
         public static ImageSource GetEmbededImageFromSource(string embededlargeImageName)
         {
