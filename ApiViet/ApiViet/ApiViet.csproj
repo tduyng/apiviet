@@ -122,9 +122,6 @@
     <Compile Include="SelectByParameter\SelectionFilters.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApiViet.addin">
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Resources\minus_5_default_16x16.png" />
     <None Include="Resources\info_default_32x32.png" />
     <None Include="Resources\info_default_16x16.png" />
@@ -196,11 +193,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DBApplication\" />
-    <Folder Include="Extension\" />
-    <Folder Include="ExtentionStorage\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2019" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2019"
