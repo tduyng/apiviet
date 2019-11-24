@@ -13,7 +13,6 @@ and [CADBIMDeveloper](https://github.com/CADBIMDeveloper)
 - [Why](#why)
 - [Addin](#addin)
 - [Installation](#installation)
-- [...](#...)
 - [Roadmap](#roadmap)
 - [License](#license)
 
@@ -29,8 +28,8 @@ and [CADBIMDeveloper](https://github.com/CADBIMDeveloper)
 
 <a name="addin"></a>
 ## :octocat: Addin
-**Revit 2019 - VS Comunity 2017 - Framework .NET Framwork 4.7.1**
-**..............**
+- **Revit 2019 - VS Comunity 2017 - Framework .NET Framwork 4.7.1**
+- **..............**
 
 
 <a name="roadmap"></a>
