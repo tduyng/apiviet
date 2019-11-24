@@ -4,11 +4,13 @@
 </p>
 Learn and do some addin revit with C# (Revit 2019)
 
+Inspired by the awsome solutions of [Victor Chekalin](https://github.com/chekalin-v) 
+and [CADBIMDeveloper](https://github.com/CADBIMDeveloper)
 
 ---
 
 ## 📄 Table of Contents
-- [Ribbon](#ribbon)
+- [Why](#why)
 - [Addin](#addin)
 - [Installation](#installation)
 - [...](#...)
@@ -17,23 +19,17 @@ Learn and do some addin revit with C# (Revit 2019)
 
 
 <a name="ribbon"></a>
-## :octocat: Ribbon
-- **Ribbon and Panel:** Create a custom ribbon panel, create or move buttons to a existed custom panel
-- **Button:** Learn and use the solution delegate (action) for create properties of button in panel 
-- **StackedItem:** for different types ribbon item
-- **PulldownButon:** 
-- **Splitbutton:**
-- **Combobox:**
-- **RadioButtonGroup:** 
-- **Textbox:**
+## :octocat: Why use this
+- **Simpler:** Easier to create the button now, useful for other projects
+- **Readable:** Create the ribbbon item with the lambda expression
+- **Modify exist RibbonItem:** We can add, modify the button in the exist tab, panel create by other addin
+
 
 
 
 <a name="addin"></a>
 ## :octocat: Addin
 .....
-
-
 
 
 <a name="roadmap"></a>
@@ -48,11 +44,11 @@ Learn and do some addin revit with C# (Revit 2019)
     - [x] Create CustomStackedItems
     - [x] Create CustomPulldownButton
     - [x] Create CustomSplitButton
-    - [ ] Create CustomCombobox
-    - [ ] Create CustomRadioButton
-    - [ ] Create CustomTextBox
-  - [ ] Add solution the permit create button in the existed panel
-    (I'm trying...)
+    - [x] Create CustomCombobox
+    - [x] Create CustomRadioButton
+    - [x] Create CustomTextBox
+    - [x] Create CustomToggleButton
+  - [x] Add solution the permit create button in the existed panel(solution of CADBIMDevelopper)
   - [ ] ...
 - [ ] Addin
   - [ ] Addin 1
@@ -66,8 +62,6 @@ Learn and do some addin revit with C# (Revit 2019)
 # 📃 License
 
 MIT © [Tien-Duy NGUYEN](https://github.com/TienDuyNGUYEN)
-
-Thank [Victor Chekalin](https://github.com/chekalin-v) for inspiring me for this solution.
 
 
 ```So let's go!``` 
