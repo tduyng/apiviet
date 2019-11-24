@@ -20,26 +20,26 @@ namespace ApiViet.Ribbon
         {
         }
 
-        internal new TextBoxData GetButtonData()
+        public override RibbonItemData GetItemData()
         {
-            TextBoxData txtData = new TextBoxData(_name);
+            TextBoxData tbxData = new TextBoxData(_name);
             if (string.IsNullOrWhiteSpace(_toolTips))
             {
-                txtData.ToolTip = _toolTips;
+                tbxData.ToolTip = _toolTips;
             }
             if(string.IsNullOrWhiteSpace(_description))
             {
-                txtData.LongDescription = _description;
+                tbxData.LongDescription = _description;
             }
             if(_smallImage != null)
             {
-                txtData.Image = _smallImage;
+                tbxData.Image = _smallImage;
             }
             if(_toolTipsImage != null)
             {
-                txtData.ToolTipImage = _toolTipsImage;
+                tbxData.ToolTipImage = _toolTipsImage;
             }
-            return txtData;
+            return tbxData;
         }
 
         // Events pressed for TextBox 

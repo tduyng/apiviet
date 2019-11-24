@@ -11,14 +11,13 @@ namespace ApiViet.Ribbon
 {
     public class CustomPulldownButton : CustomPushButton
     {
-        //private readonly IList<CustomPushButton> _buttons = new List<CustomPushButton>();
         private readonly IList<CustomPushButton> _items = new List<CustomPushButton>();
 
         public CustomPulldownButton(string name, string text) :
             base(name, text, null)
         {
         }
-        internal override ButtonData GetButtonData()
+        public override RibbonItemData GetItemData()
         {
             PulldownButtonData pulldownButtonData =
                 new PulldownButtonData(_name,
@@ -82,10 +81,22 @@ namespace ApiViet.Ribbon
             var commandClassType = typeof(TExternalCommandClass);
             return CreateButton(name, text, commandClassType, action);
         }
+        public CustomPulldownButton CreateButton<TExternalCommandClass>(string text, Action<CustomPushButton> action)
+           where TExternalCommandClass : class, IExternalCommand
+        {
+           
+            string name =typeof(TExternalCommandClass).ToString();
 
-        public CustomPulldownButton CreateButton(string name,
-                                  string text,
-                                  Type externalCommandType)
+            return CreateButton<TExternalCommandClass>(name, text, action);
+        }
+        public CustomPulldownButton CreateButton<TExternalCommandClass>(string text)
+           where TExternalCommandClass : class, IExternalCommand
+        {
+            return CreateButton<TExternalCommandClass>(text, x => { });
+        }
+
+
+        public CustomPulldownButton CreateButton(string name,string text,Type externalCommandType)
         {
             return CreateButton(name, text, externalCommandType, null);
         }
@@ -96,13 +107,12 @@ namespace ApiViet.Ribbon
         {
             foreach (var item in Items)
             {
-                ConvertToPushButton = pulldownButton.AddPushButton(item.GetButtonData() as PushButtonData);
+                ConvertToPushButton = pulldownButton.AddPushButton(item.GetItemData() as PushButtonData);
             }
         }
 
 
-        //Try add the "extension" method to add a separed button to the pulldown button but it's not still work
-
+        //Try add the "extension" method to add a separed button to the pulldown button
         public PushButton AddButton(Autodesk.Revit.UI.PulldownButton pulldownButton,
             string name,
             string text,
@@ -113,7 +123,7 @@ namespace ApiViet.Ribbon
                 text,
                 externalCommandType);
             action?.Invoke(button);
-            return pulldownButton.AddPushButton(button.GetButtonData() as PushButtonData);
+            return pulldownButton.AddPushButton(button.GetItemData() as PushButtonData);
         }
         public PushButton AddButton<TExternalCommandClass>(Autodesk.Revit.UI.PulldownButton pulldownButton,
             string name,

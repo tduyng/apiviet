@@ -121,23 +121,11 @@
   <data name="arrow_carribean_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_carribean_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="arrow_royal_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_royal_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow_royal_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_royal_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_mark_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check-mark_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="check_mark_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check-mark_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circle_babie_pink_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle_babie_pink_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,89 +178,11 @@
   <data name="info_caribbean_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_caribbean_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minus_5_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus_5_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minus_5_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus_5_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ok_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ok_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ok_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ok_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_4_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_4_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_4_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_4_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Revit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Revit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Revit_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Revit_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_caribbean_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_caribbean_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_caribbean_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_caribbean_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_orange_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_orange_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_orange_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_orange_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_royal_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_royal_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search_royal_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_royal_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_caribbean_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_caribbean_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_caribean_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_caribean_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_guacamole_green_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_guacamole_green_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_guacamole_green_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_guacamole_green_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_orage_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_orage_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_orange_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_orange_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_royal_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_royal_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_royal_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_royal_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_soylent_red_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_soylent_red_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_soylent_red_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_soylent_red_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="video_play_caribbean_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video_play_caribbean_blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,29 +190,11 @@
   <data name="video_play_caribbean_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video_play_caribbean_blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="video_play_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\video_play_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="video_play_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\video_play_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="video_play_royal_blue_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video_play_royal-blue_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="video_play_royal_blue_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video_play_royal-blue_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="video_play_soylent_red_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\video_play_soylent_red_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="video_play_soylent_red_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\video_play_soylent_red_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x_mark_default_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x_mark_default_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x_mark_default_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x_mark_default_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="x_mark_soylent_red_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_mark_soylent_red_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

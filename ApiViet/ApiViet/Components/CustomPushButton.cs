@@ -1,11 +1,7 @@
 /* 
  * Learn solution of Victor Chekalin
  * 
- * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
- * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
- * PARTICULAR PURPOSE.
- * 
+
  */
 #region Namespaces
 using System;
@@ -23,15 +19,17 @@ namespace ApiViet.Ribbon
     {
         protected readonly string _name;
         protected readonly string _text;
-        private readonly string _className;
+        protected string _className;
+        private string _AvailabilityClassName;
         protected ImageSource _largeImage;
         protected ImageSource _smallImage;
         protected ImageSource _toolTipsImage;
         protected string _toolTips;
         protected string _description;
-        private readonly string _assemblyLocation;
+        protected string _assemblyLocation;
         protected ContextualHelp _contextualHelp;
         public PushButton ConvertToPushButton { get; set; }
+        public bool IsDefault { get; private set; }
 
 
         public CustomPushButton(string name,
@@ -45,8 +43,19 @@ namespace ApiViet.Ribbon
             _className = externalCommandType.FullName;
             _assemblyLocation = externalCommandType.Assembly.Location;
         }
+        public CustomPushButton SetAvailability<T>() where T : IExternalCommandAvailability
+        {
+            var availabilityCommandType = typeof(T);
 
+            if (availabilityCommandType.Assembly.Location != _assemblyLocation)
+                throw new InvalidOperationException("Command and CommandAvailability classes must be located in the same assembly");
 
+            _AvailabilityClassName = availabilityCommandType.FullName;
+
+            return this;
+        }
+
+        #region Set large image
         public CustomPushButton SetLargeImage(ImageSource largeImage)
         {
             _largeImage = largeImage;
@@ -60,7 +69,7 @@ namespace ApiViet.Ribbon
         }
         public CustomPushButton SetLargeImage(Icon largeImage)
         {
-            _largeImage = ImageUtils.ConvertFromIcon(largeImage);
+            _largeImage = ImageUtils.ConvertFromBitmap(largeImage);
             return this;
         }
         public CustomPushButton SetLargeImage(string largeImageFullName)
@@ -69,6 +78,9 @@ namespace ApiViet.Ribbon
             return this;
         }
 
+        #endregion //Set large image
+
+        #region Set small image
         //Set small Image
         public CustomPushButton SetSmallImage(ImageSource smallImage)
         {
@@ -82,7 +94,7 @@ namespace ApiViet.Ribbon
         }
         public CustomPushButton SetSmallImage(Icon smallImage)
         {
-            _smallImage = ImageUtils.ConvertFromIcon(smallImage);
+            _smallImage = ImageUtils.ConvertFromBitmap(smallImage);
             return this;
         }
         public CustomPushButton SetSmallImage(string smallImageFullName)
@@ -91,6 +103,9 @@ namespace ApiViet.Ribbon
             return this;
         }
 
+        #endregion //Set small image
+
+        #region Set tooltip Image, description, help
         //Set ToolTipImage
         public CustomPushButton SetToolTipsImage(ImageSource toolTipsImage)
         {
@@ -104,7 +119,7 @@ namespace ApiViet.Ribbon
         }
         public CustomPushButton SetToolTipsImage(Icon toolTipsImage)
         {
-            _toolTipsImage = ImageUtils.ConvertFromIcon(toolTipsImage);
+            _toolTipsImage = ImageUtils.ConvertFromBitmap(toolTipsImage);
             return this;
         }
         public CustomPushButton SetToolTipsImage(string toolTipsImageFullName)
@@ -112,8 +127,7 @@ namespace ApiViet.Ribbon
             _toolTipsImage = ImageUtils.GetEmbededImageFromSource(toolTipsImageFullName);
             return this;
         }
-
-
+  
         public CustomPushButton SetToolTips(string toolTips)
         {
             _description = toolTips;
@@ -136,9 +150,18 @@ namespace ApiViet.Ribbon
             _contextualHelp = new ContextualHelp(ContextualHelpType.Url, url);
             return this;
         }
+        #endregion //Set tooltip Image
 
-        //PushButtonData
-        internal virtual ButtonData GetButtonData()
+        //Set button defaut in panel
+        public CustomPushButton SetDefault()
+        {
+            IsDefault = true;
+            return this;
+        }
+
+
+        //return button data
+        public override RibbonItemData GetItemData()
         {
             PushButtonData pushButtonData =
                  new PushButtonData(_name,
@@ -146,7 +169,7 @@ namespace ApiViet.Ribbon
                                     _assemblyLocation,
                                     _className);
 
-            if (_largeImage  != null)
+            if (_largeImage != null)
             {
                 pushButtonData.LargeImage = _largeImage;
             }
@@ -155,7 +178,7 @@ namespace ApiViet.Ribbon
             {
                 pushButtonData.Image = _smallImage;
             }
-            if (_toolTipsImage !=  null)
+            if (_toolTipsImage != null)
             {
                 pushButtonData.ToolTipImage = _toolTipsImage;
             }
@@ -167,10 +190,12 @@ namespace ApiViet.Ribbon
             {
                 pushButtonData.LongDescription = _description;
             }
-            if (_contextualHelp !=  null)
+            if (_contextualHelp != null)
             {
                 pushButtonData.SetContextualHelp(_contextualHelp);
             }
+            if (!string.IsNullOrEmpty(_AvailabilityClassName))
+                pushButtonData.AvailabilityClassName = _AvailabilityClassName;
             return pushButtonData;
         }
     }

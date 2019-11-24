@@ -50,7 +50,7 @@ namespace ApiViet.Helpers
                 DeleteObject(hBitmap);
             }
         }
-        public static BitmapSource ConvertFromIcon(Icon icon)
+        public static BitmapSource ConvertFromBitmap(Icon icon)
         {
             try
             {

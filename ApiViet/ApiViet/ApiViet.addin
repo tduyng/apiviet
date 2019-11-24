@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Application ApiViet</Name>
+    <Assembly>ApiViet.dll</Assembly>
+    <FullClassName>ApiViet.AppStartProject</FullClassName>
+    <ClientId>E818CA2F-1351-40CD-9430-21AE48D8AA3F</ClientId>
+    <VendorId>Tien Duy NGUYEN</VendorId>
+    <VendorDescription>tienduy.nguyen.it@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
