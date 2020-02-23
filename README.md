@@ -64,7 +64,7 @@ and [CADBIMDeveloper](https://github.com/CADBIMDeveloper)
 <a name="license"></a>
 # 📃 License
 
-MIT © [Tien-Duy NGUYEN](https://github.com/TienDuyNGUYEN)
+MIT © [Tien-Duy NGUYEN](https://github.com/tienduy-nguyen)
 
 
 ```So let's go!``` 
